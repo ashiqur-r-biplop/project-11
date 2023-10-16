@@ -1,6 +1,7 @@
 import React from 'react';
 
 const HappyCustomer = () => {
+    // Update:
     return (
         <div>
             <div className="flex justify-center">
