@@ -11,7 +11,7 @@ import TopRecruiters from "../../../Component/Main/Home/TopRecruiters";
 const Home = () => {
   return (
     <div>
-      {/* akldf;lkadsjf */}
+      {/* akldf;lkadsjf, Masud Bhuiyan */}
       <Header></Header>
       <BrowseByCategory></BrowseByCategory>
       <JobsOfTheDay></JobsOfTheDay>
