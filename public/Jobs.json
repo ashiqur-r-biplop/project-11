@@ -1,0 +1,386 @@
+[
+    {
+        "id": 1,
+        "job_portal": "LinkedIn",
+        "category": "Management",
+        "company_photo": "https://i.ibb.co/q9P9RtN/brand-1.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 2,
+        "job_portal": "LinkedIn",
+        "category": "Management",
+        "company_photo": "https://i.ibb.co/q9P9RtN/brand-1.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 3,
+        "job_portal": "LinkedIn",
+        "category": "Management",
+        "company_photo": "https://i.ibb.co/q9P9RtN/brand-1.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 4,
+        "job_portal": "LinkedIn",
+        "category": "Management",
+        "company_photo": "https://i.ibb.co/q9P9RtN/brand-1.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 5,
+        "job_portal": "Nintendo",
+        "category": "Marketing_&_Sale",
+        "company_photo": "https://i.ibb.co/tQxNTFq/brand-7.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 6,
+        "job_portal": "Nintendo",
+        "category": "Marketing_&_Sale",
+        "company_photo": "https://i.ibb.co/tQxNTFq/brand-7.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 7,
+        "job_portal": "LinkedIn",
+        "category": "Marketing_&_Sale",
+        "company_photo": "https://i.ibb.co/tQxNTFq/brand-7.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 8,
+        "job_portal": "LinkedIn",
+        "category": "Marketing_&_Sale",
+        "company_photo": "https://i.ibb.co/tQxNTFq/brand-7.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 9,
+        "job_portal": "Dailymotion",
+        "category": "finance",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 10,
+        "job_portal": "Dailymotion",
+        "category": "finance",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 11,
+        "job_portal": "Dailymotion",
+        "category": "finance",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 12,
+        "job_portal": "Dailymotion",
+        "category": "finance",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 13,
+        "job_portal": "Dailymotion",
+        "category": "human_resource",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 14,
+        "job_portal": "Dailymotion",
+        "category": "human_resource",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 15,
+        "job_portal": "Dailymotion",
+        "category": "human_resource",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 16,
+        "job_portal": "Dailymotion",
+        "category": "human_resource",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 17,
+        "job_portal": "Dailymotion",
+        "category": "Retail_&_Products",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 18,
+        "job_portal": "Dailymotion",
+        "category": "Retail_&_Products",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 19,
+        "job_portal": "Dailymotion",
+        "category": "Retail_&_Products",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 20,
+        "job_portal": "Dailymotion",
+        "category": "Retail_&_Products",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 21,
+        "job_portal": "Dailymotion",
+        "category": "Content_Writer",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 22,
+        "job_portal": "Dailymotion",
+        "category": "Content_Writer",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 23,
+        "job_portal": "Dailymotion",
+        "category": "Content_Writer",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    },
+    {
+        "id": 24,
+        "job_portal": "Dailymotion",
+        "category": "Content_Writer",
+        "company_photo": "https://i.ibb.co/RPSZmQh/brand-4.png",
+        "Job_title": "UI / UX Designer fulltime",
+        "job_type": "Full-Time",
+        "time": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere atque sapiente. Similique sunt distinctio, deleniti optio quos veritatis voluptatibus tempore assumenda! Nulla commodi eaque libero aut. Asperiores alias ea et nobis, voluptatibus numquam vel voluptate perferendis, beatae deleniti, delectus sequi eos hic recusandae. Ad blanditiis ipsum, repudiandae quae aliquam quaerat porro odit molestias modi, impedit consequatur optio fuga, necessitatibus iusto labore iste! Distinctio placeat libero impedit ad veritatis eaque pariatur error laborum? Id impedit exercitationem possimus eaque sunt repudiandae magni porro nemo, pariatur voluptatem autem laboriosam est doloremque repellendus sed rem dolorem recusandae esse? Repellendus provident perferendis, deserunt eos molestiae repudiandae eum reprehenderit aspernatur voluptatum, suscipit veniam blanditiis. Ex eaque excepturi omnis ducimus consequatur illum laboriosam voluptate odio non voluptatum. Delectus illum velit eos molestiae, natus enim, ut qui sunt animi dicta exercitationem quae eligendi non quibusdam vel ipsa ea, iusto impedit maxime voluptates modi. Impedit debitis ducimus placeat eligendi labore excepturi perferendis sed voluptate eum error? Recusandae soluta unde ad sit libero. Debitis doloremque eaque praesentium distinctio nesciunt vero sequi eveniet illum necessitatibus veniam alias quia, eius, corrupti cumque! Eveniet sit corrupti vitae quis praesentium, similique delectus exercitationem debitis vero dolores dolore dolorem velit ad odit. Expedita cum laboriosam adipisci esse ab in laudantium similique inventore ad cupiditate reprehenderit accusamus, dicta delectus, saepe, iste atque! Dolores, dignissimos dicta totam consequatur ex quod. Adipisci illum voluptate modi natus, quas sit accusantium eveniet dignissimos eligendi cumque ipsam corporis odit nulla non veniam magnam voluptas quasi minima? Aliquam perferendis asperiores, distinctio nemo, maiores quos excepturi repudiandae enim corporis dolorem provident praesentium consequatur aperiam architecto et fugit accusamus laboriosam, assumenda suscipit exercitationem minus. Deleniti asperiores et inventore ad deserunt possimus quia aliquam eum minima eos nihil, porro officia nam animi numquam voluptatum eligendi ab illum incidunt reprehenderit omnis consequatur totam ipsam distinctio. Saepe aliquid maiores, illo odit, dignissimos id sint repellendus iusto, suscipit sequi cumque.",
+        "requerment": [
+            "Adobe XD",
+            "Figma",
+            "Photoshop"
+        ],
+        "selary": 500
+    }
+]
