@@ -7,6 +7,9 @@ const TopRecruiters = () => {
         title="Top Recruiters"
         subTitle="Discover your next career move, freelance gig, or internship"
       ></SectionTitle>
+      <div>
+        
+      </div>
     </div>
   );
 };
