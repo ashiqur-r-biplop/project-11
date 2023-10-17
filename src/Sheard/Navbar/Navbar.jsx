@@ -39,8 +39,8 @@ const Navbar = () => {
   console.log(user?.photoURL);
   const handleLogout = () => {
     logOut()
-      .then((res) => {})
-      .then((data) => {});
+      .then((res) => { })
+      .then((data) => { });
   };
   return (
     <div className="bg-gray-300 sticky top-0 z-[999]">
