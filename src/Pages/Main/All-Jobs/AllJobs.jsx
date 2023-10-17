@@ -1,9 +1,12 @@
+ 
+
   
 
 const AllJobs = () => {
+      
   return (
     <section className="container md:w-[1440px] mt-20 mx-auto">
-          <div className="hero md:w-[1440px]   bg-[#f2f6fd] my-2">
+          <div className="hero md:w-[1440px] bg-[#f2f6fd] my-2">
         <div className="hero-content  ">
           <div className="max-w-md">
             <h1 className=" text-4xl md:text-5xl font-bold text-center">2023 Jobs Available Now</h1>
@@ -33,6 +36,65 @@ const AllJobs = () => {
               
            </div>
           </div>
+        </div>
+      </div>
+
+       {/* dewar system */}
+       <div className="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col items-center justify-center">
+          {/* Page content here */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+              {/* card */}
+          </div>
+         
+
+          <label htmlFor="my-drawer-2" className="btn  btn-accent drawer-button lg:hidden">
+            Open drawer
+          </label>
+        </div>
+        <div className="drawer-side">
+        <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
+          <form className="menu p-4 w-80 min-h-full bg-base-200 form-control">
+            {/* Sidebar content here */}
+            <h2 className="text-center text-xl font-bold">Job type</h2>
+            <div className="from-check">
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Full</label> <br />
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4">Part</label> <br />
+                
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Remote</label>
+            </div>
+            
+             
+            <hr className="font-bold my-5" />
+            <h3 className="text-center text-xl font-bold">Position </h3>
+            <div className="from-check">
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Senior</label> <br />
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4">Junior</label> <br />
+                
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Fresher</label>
+            </div>
+            <hr className="font-bold my-5" />
+            <h3 className="text-center text-xl font-bold">On-Site / Remote </h3>
+            <div className="from-check">
+              <input type="checkbox" className="text-xl" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Onsite</label> <br />
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4">Remote</label> <br />
+                
+              <input type="checkbox" name="name" id="" />
+              <label htmlFor="name" className="text-lg ms-4"> Hybrid</label>
+            </div>
+           
+             
+          </form>
         </div>
       </div>
     </section>
