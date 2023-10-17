@@ -4,6 +4,7 @@ import img1 from '../../../assets/about_bg.png';
 import img2 from '../../../assets/about_img1.png';
 import { FaHome } from 'react-icons/fa';
 import HappyCustomer from './HappyCustomer';
+import Team from './Team';
 
 const About = () => {
   return (
@@ -48,6 +49,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Team></Team>
       <HappyCustomer></HappyCustomer>
     </div>
   );
