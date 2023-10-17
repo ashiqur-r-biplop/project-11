@@ -1,5 +1,5 @@
-import React from 'react';
 import img1 from '../../../assets/About/team1.png'
+import { FaRegStar } from 'react-icons/fa6';
 
 const Team = () => {
     return (
