@@ -20,7 +20,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="text-lg">
-        <Link to="/Linkll-jobs" className="hover:text-[#3c65f5]">
+        <Link to="/all-jobs" className="hover:text-[#3c65f5]">
           All Jobs
         </Link>
       </li>
@@ -43,10 +43,22 @@ const Navbar = () => {
       .then((data) => { });
   };
   return (
-    <div className="bg-gray-300 sticky top-0 z-[500]">
-      <div className="container mx-auto navbar items-center">
+    <div className="bg-gray-300 sticky top-0 z-[999]">
+      <div className="container mx-auto navbar justify-between items-center">
         <div className="navbar-start">
-          <div className="dropdown">
+          <Link to="/">
+            <div className="py-1 flex items-center justify-start normal-case">
+              <img src={logo} className="w-8 h-8" alt="" />
+              <h1 className="text-xl lg:text-3xl font-bold">JobBox</h1>
+            </div>
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{navOptions}</ul>
+        </div>
+
+        <div className="flex gap-5 text-lg">
+          <div className="dropdown  dropdown-left  z-[9999]">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,24 +77,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 bg-green-600"
             >
               {navOptions}
             </ul>
           </div>
-          <Link to="/">
-            <div className="py-1 flex items-center justify-start btn btn-ghost normal-case">
-              <img src={logo} className="w-8 h-8" alt="" />
-              <h1 className="text-xl lg:text-3xl font-bold">JobBox</h1>
-            </div>
-          </Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navOptions}</ul>
-        </div>
-        <div className="flex gap-5 text-lg">
           {user ? (
-            <div className="dropdown dropdown-bottom z-[99999999]  dropdown-end">
+            <div className="dropdown dropdown-bottom z-[9999]  dropdown-end">
               <label tabIndex={0} className="m-1 cursor-pointer">
                 <img
                   src={user?.photoURL}
