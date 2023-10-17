@@ -11,6 +11,10 @@ const HappyCustomer = () => {
                         is to get overwhelmed with the number.</p>
                 </div>
             </div>
+            {/* Client Review Section */}
+            <div>
+
+            </div>
         </div>
     );
 };
