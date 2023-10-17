@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "reporterName": "John Doe",
+    "reportDateTime": "2023-10-16T09:00:00",
+    "readTime": "5 mins",
+    "reportImage": "https://img.freepik.com/premium-photo/group-young-businesspeople-working-together-office-planning-analysis-work-teamwork_217236-10328.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/premium-photo/happy-handsome-businessman-against-minimalist-backdrop-with-crossed-arms-generative-ai_830962-3135.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "Exciting Music Festival in the Heart of the City",
+    "reportDescription": "Join us for a mesmerizing musical journey in the heart of the city. The festival features top artists from around the world, food stalls, and a lively atmosphere that you won't want to miss.",
+    "categoryName": "Events"
+  },
+  {
+    "id": 2,
+    "reporterName": "Emily Smith",
+    "reportDateTime": "2023-10-15T14:30:00",
+    "readTime": "3 mins",
+    "reportImage": "https://img.freepik.com/free-photo/close-up-people-learning-job_23-2149300762.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/free-photo/bearded-man-suit-posing-with-crossed-arms_171337-18592.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "New Research Reveals Breakthrough in Renewable Energy",
+    "reportDescription": "Recent research has uncovered a groundbreaking method for harnessing renewable energy that could revolutionize the industry. This discovery is a game-changer for sustainability.",
+    "categoryName": "News"
+  },
+  {
+    "id": 3,
+    "reporterName": "Sarah Johnson",
+    "reportDateTime": "2023-10-14T11:45:00",
+    "readTime": "4 mins",
+    "reportImage": "https://img.freepik.com/free-photo/brainstorming-young-team-meeting_329181-9638.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/premium-photo/young-businessman-isolated-white_53419-207.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "Cultural Heritage Exhibition Celebrates Diversity",
+    "reportDescription": "The Cultural Heritage Exhibition is a celebration of diversity and cultural richness. Explore art, artifacts, and stories from different cultures around the world.",
+    "categoryName": "Events"
+  },
+  {
+    "id": 4,
+    "reporterName": "Michael Brown",
+    "reportDateTime": "2023-10-13T17:15:00",
+    "readTime": "2 mins",
+    "reportImage": "https://img.freepik.com/free-photo/cheerful-friends-sitting-cafe-talking-with-each-other_171337-19750.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/free-photo/young-successful-businessman-correcting-tie_176420-1133.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "Global Climate Agreement to Reduce Emissions",
+    "reportDescription": "World leaders have come to an agreement to significantly reduce greenhouse gas emissions, taking a crucial step toward combatting climate change and protecting the planet.",
+    "categoryName": "News"
+  },
+  {
+    "id": 5,
+    "reporterName": "Linda Wilson",
+    "reportDateTime": "2023-10-12T10:20:00",
+    "readTime": "6 mins",
+    "reportImage": "https://img.freepik.com/premium-photo/meeting-business-partners-conference-room_252847-25349.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/premium-photo/handsome-young-business-man-holding-document-folder_220507-699.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "Tech Conference Highlights Latest Innovations",
+    "reportDescription": "The Tech Conference is a showcase of the latest technological innovations and trends. Learn from industry experts and get a glimpse of the future of technology.",
+    "categoryName": "Events"
+  },
+  {
+    "id": 6,
+    "reporterName": "David Lee",
+    "reportDateTime": "2023-10-11T13:00:00",
+    "readTime": "3 mins",
+    "reportImage": "https://img.freepik.com/premium-photo/business-team-is-developing-new-project-sitting-desk-modern-office-photo-has-empty-space-your-text_160672-17199.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/free-photo/pretty-young-man-student-businessman-jacket-holds-his-arms-crossed-isolated-light-grey-wall_231208-6133.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reportTitle": "Breakthrough in Space Exploration Technology",
+    "reportDescription": "A recent scientific breakthrough in medical research has the potential to revolutionize healthcare. This discovery may lead to new treatments for various diseases.",
+    "categoryName": "News"
+  },
+  {
+    "id": 7,
+    "reporterName": "Olivia White",
+    "reportDateTime": "2023-10-10T15:45:00",
+    "readTime": "4 mins",
+    "reportImage": "https://img.freepik.com/free-photo/executives-paying-attention-digital-tablet_1098-2279.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/free-photo/skyscraper-view-city-leader-window-frame_1134-1034.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reportTitle": "Artists Unite for Charity Concert Benefiting Children",
+    "reportDescription": "Talented artists are coming together for a charity concert aimed at helping underprivileged children. Enjoy an evening of music, entertainment, and a great cause.",
+    "categoryName": "Events"
+  },
+  {
+    "id": 8,
+    "reporterName": "Daniel Clark",
+    "reportDateTime": "2023-10-09T08:30:00",
+    "readTime": "3 mins",
+    "reportImage": "https://img.freepik.com/free-photo/executives-joking-laughing-office_1098-1834.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/premium-photo/modern-business-man-formal-suit-standing-with-crossed-arms-isolated-grey-background-businesspeople-concept_533057-1641.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reportTitle": "Breakthrough in Space Exploration Technology",
+    "reportDescription": "A remarkable breakthrough in space exploration technology promises to take us further into the cosmos. This advancement could pave the way for exciting space missions.",
+    "categoryName": "News"
+  },
+  {
+    "id": 9,
+    "reporterName": "Sophia Davis",
+    "reportDateTime": "2023-10-08T12:15:00",
+    "readTime": "5 mins",
+    "reportImage": "https://img.freepik.com/free-photo/window-pensive-handyman-smartphone-woman_1134-1217.jpg?w=900&t=st=1697538650~exp=1697539250~hmac=0b311848616b6118826ca62778cb07a7cbedf74b1ada875fe360ca19e73de9d6",
+    "reporterImage": "https://img.freepik.com/free-photo/young-handsome-business-man-choosing-car-car-showroom_1303-17901.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais",
+    "reportTitle": "Breakthrough in Space Exploration Technology",
+    "reportDescription": "Get ready for a fashion show extravaganza showcasing the latest collections from top designers. Witness the creativity and style of the fashion world.",
+    "categoryName": "Events"
+  },
+  {
+    "id": 10,
+    "reporterName": "Matthew Taylor",
+    "reportDateTime": "2023-10-07T16:50:00",
+    "readTime": "2 mins",
+    "reportImage": "https://img.freepik.com/free-vector/business-people-working-table-illustration_1308-1062.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reporterImage": "https://img.freepik.com/premium-photo/happy-handsome-businessman-against-minimalist-backdrop-with-crossed-arms-generative-ai_830962-3135.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais",
+    "reportTitle": "Major Scientific Discovery Could Revolutionize Medicine",
+    "reportDescription": "Scientists have made a major discovery with the potential to revolutionize the field of medicine. This breakthrough may lead to new treatments and improved healthcare.",
+    "categoryName": "News"
+  }
+]

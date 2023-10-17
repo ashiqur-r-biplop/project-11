@@ -7,7 +7,7 @@ import Team from "./Team";
 
 const About = () => {
   return (
-    <div>
+    <div className="">
       <div className="bg-style relative">
         <img className="bg-style" src={img1} alt="" />
         {/* absolute left-0 top-0  */}
