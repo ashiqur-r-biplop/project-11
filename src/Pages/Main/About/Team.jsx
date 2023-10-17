@@ -20,7 +20,7 @@ const Team = () => {
             </div>
             {/* Card Section */}
             <div className="container md:mx-auto px-4 md:flex justify-center mt-16">
-                <div className="card w-full md:w-96 bg-base-100 shadow-xl m-4">
+                <div className="card w-full border-2 border-gray-200 md:w-96 bg-base-100 shadow-xl m-4 hover:border-gray-300 transition ease-in-out delay-150  hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-100/50 duration-300 pt-8">
                     <div className="avatar mx-auto">
                         <div className="w-24 rounded-full">
                             <img src={img1} />
@@ -46,7 +46,7 @@ const Team = () => {
                         </p>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl m-4">
+                <div className="card w-full border-2 border-gray-200 md:w-96 bg-base-100 shadow-xl m-4 hover:border-gray-300 transition ease-in-out delay-150  hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-100/50 duration-300 pt-8">
                     <div className="avatar mx-auto">
                         <div className="w-24 rounded-full">
                             <img src={img1} />
@@ -72,7 +72,7 @@ const Team = () => {
                         </p>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl m-4">
+                <div className="card w-full border-2 border-gray-200 md:w-96 bg-base-100 shadow-xl m-4 hover:border-gray-300 transition ease-in-out delay-150  hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-100/50 duration-300 pt-8">
                     <div className="avatar mx-auto">
                         <div className="w-24 rounded-full">
                             <img src={img1} />
