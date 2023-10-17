@@ -7,6 +7,11 @@ import About from "../Pages/Main/About/About";
 import AllJobs from "../Pages/Main/All-Jobs/AllJobs";
 import Contact from "../Pages/Main/Contact/Contact";
 import Blog from "../Pages/Main/Blog/Blog";
+import Profile from "../Pages/Main/Profile/Profile";
+import CompanyProfile from "../Pages/Dashboard/Company/CompanyProifle/CompanyProfile";
+import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
+import AppliedJobs from "../Pages/Main/AppliedJobs/AppliedJobs";
+import Dashboard from "../Layout/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +47,30 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
+
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
+      },
+
+      {
+        path: "/company-profile",
+        element: <CompanyProfile></CompanyProfile>,
+      },
+
+      {
+        path: "/admin-profile",
+        element: <AdminProfile></AdminProfile>,
+      },
+
+      {
+        path: "/applied-jobs",
+        element: <AppliedJobs></AppliedJobs>,
+      },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
   },
 ]);
