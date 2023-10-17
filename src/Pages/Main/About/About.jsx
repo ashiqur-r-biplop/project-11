@@ -8,7 +8,7 @@ import Team from './Team';
 
 const About = () => {
   return (
-    <div>
+    <div className="">
       <div className="bg-style relative">
         <img className='bg-style' src={img1} alt="" />
         {/* absolute left-0 top-0  */}
@@ -19,7 +19,7 @@ const About = () => {
             <h1 className='text-3xl font-bold'>About Us</h1>
             <h4 className='text-xl mt-2'>Get the latest news, updates and tips</h4>
           </div>
-          <div className=''>
+          <div className='md:ms-96 md:mt-8'>
             <button className="btn  btn-sm"> <FaHome></FaHome> Home</button>
           </div>
         </div>
