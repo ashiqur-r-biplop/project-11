@@ -1,0 +1,122 @@
+[
+  {
+    "name": "LinkedIn",
+    "rating": 5,
+    "totalRating": 500,
+    "location": "New York, US",
+    "openJobs": 25,
+    "logoURL": "https://img.freepik.com/premium-vector/square-linkedin-logo-isolated-white-background_469489-892.jpg?w=740"
+  },
+  {
+    "name": "Adobe",
+    "rating": 5,
+    "totalRating": 300,
+    "location": "New York, US",
+    "openJobs": 17,
+    "logoURL": "https://img.freepik.com/premium-vector/adobe-after-effects-software-icon_539007-183.jpg?w=740"
+  },
+  {
+    "name": "Dailymotion",
+    "rating": 4.8,
+    "totalRating": 700,
+    "location": "New York, US",
+    "openJobs": 65,
+    "logoURL": "https://img.freepik.com/premium-vector/letter-c-logo_477193-81.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=sph"
+  },
+  {
+    "name": "NewSum",
+    "rating": 4.0,
+    "totalRating": 400,
+    "location": "New York, US",
+    "openJobs": 25,
+    "logoURL": "https://img.freepik.com/free-vector/colorful-bird-illustration-gradient_343694-1741.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=sph"
+  },
+  {
+    "name": "PowerHome",
+    "rating": 4.7,
+    "totalRating": 600,
+    "location": "New York, US",
+    "openJobs": 34,
+    "logoURL": "https://img.freepik.com/premium-vector/environmental-concept-house-tree-energy_24877-12508.jpg?w=740"
+  },
+  {
+    "name": "Whop.com",
+    "rating": 4.3,
+    "totalRating": 350,
+    "location": "New York, US",
+    "openJobs": 56,
+    "logoURL": "https://img.freepik.com/free-vector/whip-pop-art-comic-speech-bubbles-book-sound-effects_1142-9287.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais"
+  },
+  {
+    "name": "Greewood",
+    "rating": 4.6,
+    "totalRating": 550,
+    "location": "New York, US",
+    "openJobs": 78,
+    "logoURL": "https://img.freepik.com/free-vector/travel-logo-concept-design_460848-11100.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=ais"
+  },
+  {
+    "name": "Kentucky",
+    "rating": 4.4,
+    "totalRating": 450,
+    "location": "New York, US",
+    "openJobs": 98,
+    "logoURL": "https://img.freepik.com/free-photo/3d-render-vs-company-metal-letter-logo-pen-tool-created-clipping-path-included-jpeg-easy-composite_460848-7192.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=sph"
+  },
+  {
+    "name": "Qeuity",
+    "rating": 4.1,
+    "totalRating": 250,
+    "location": "New York, US",
+    "openJobs": 9,
+    "logoURL": "https://img.freepik.com/premium-psd/embossed-logo-mockup-black-wall_139869-684.jpg?w=740"
+  },
+  {
+    "name": "Honda",
+    "rating": 4.9,
+    "totalRating": 800,
+    "location": "New York, US",
+    "openJobs": 34,
+    "logoURL": "https://img.freepik.com/free-vector/vintage-motorcycle-skull-moto-helmet_225004-1922.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais"
+  },
+  {
+    "name": "Toyota",
+    "rating": 4.0,
+    "totalRating": 400,
+    "location": "New York, US",
+    "openJobs": 26,
+    "logoURL": "https://img.freepik.com/premium-vector/easy-go-handshake-car-dealership-car-ride-location-map-icon-logo_755061-77.jpg?w=740"
+  },
+  {
+    "name": "Lexuxs",
+    "rating": 4.2,
+    "totalRating": 300,
+    "location": "New York, US",
+    "openJobs": 54,
+    "logoURL": "https://img.freepik.com/premium-vector/letter-logos-1158-best-letter-logo-ideas-free-letter_950268-35.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.2.1519749542.1697281043&semt=ais"
+  },
+  {
+    "name": "Ondo",
+    "rating": 4.7,
+    "totalRating": 600,
+    "location": "New York, US",
+    "openJobs": 58,
+    "logoURL": "https://img.freepik.com/free-psd/gold-logo-mockup-grey-wall_511564-1489.jpg?w=826&t=st=1697442248~exp=1697442848~hmac=0f8d3722a4a6bef211d5a413d9e8de20d185f328ccca3511dd392d74e1dcfebb"
+  },
+  {
+    "name": "Square",
+    "rating": 4.5,
+    "totalRating": 500,
+    "location": "New York, US",
+    "openJobs": 37,
+    "logoURL": "https://img.freepik.com/premium-vector/i-c-beginning-logo-concept_639744-390.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=sph"
+  },
+  {
+    "name": "Vista",
+    "rating": 4.3,
+    "totalRating": 350,
+    "location": "New York, US",
+    "openJobs": 43,
+    "logoURL": "https://img.freepik.com/free-vector/letter-b-ribbon-logo-isolated-gray_126523-919.jpg?size=626&ext=jpg&uid=R93922666&ga=GA1.1.1519749542.1697281043&semt=sph"
+  }
+]
