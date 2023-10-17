@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const navOptions = (
     <>
       <li className="text-lg">

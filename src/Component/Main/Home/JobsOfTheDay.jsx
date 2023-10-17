@@ -112,6 +112,7 @@ const JobsOfTheDay = () => {
                   </div>
                   <span>flash icon</span>
                 </div>
+                
                 <div>
                   <h1 className="font-bold text-xl">{d?.Job_title}</h1>
                   <div className="flex items-center gap-10 text-gray-500 py-3">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MillionsOfJobs = () => {
 
   return (
-    <section className="py-5 container  mx-auto px-3 md:px-20">
+    <section className="pt-16 pb-7 container  mx-auto px-3 md:px-24">
       <div className="md:flex justify-center p-10 gap-10">
         <div className="relative text-center">
           <img
@@ -27,7 +27,7 @@ const MillionsOfJobs = () => {
 
 
 
-        <div className="md:p-10 p-5 space-y-2 md:pl-24">
+        <div className="md:p-10 p-5 space-y-2 md:pl-28">
           <div className="space-y-2">
             <h3 className="text-[32px] leading-[40px] font-extrabold text-[#a0abb8]">
               Millions Of Jobs
