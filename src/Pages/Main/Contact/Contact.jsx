@@ -11,7 +11,7 @@ const Contact = () => {
           <AboutUsBanner />
           <Locatoin />
           <ContactForm />
-          <OurTeam />
+          {/* <OurTeam /> */}
           <Testimonial/>
       </>
   )
