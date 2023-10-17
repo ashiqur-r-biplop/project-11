@@ -15,7 +15,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li className="text-lg">
-        <Link to="/Linkbout" className="hover:text-[#3c65f5]">
+        <Link to="/about" className="hover:text-[#3c65f5]">
           About
         </Link>
       </li>
@@ -39,8 +39,8 @@ const Navbar = () => {
   console.log(user?.photoURL);
   const handleLogout = () => {
     logOut()
-      .then((res) => {})
-      .then((data) => {});
+      .then((res) => { })
+      .then((data) => { });
   };
   return (
     <div className="bg-gray-300 sticky top-0 z-[500]">
