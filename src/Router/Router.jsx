@@ -12,6 +12,7 @@ import CompanyProfile from "../Pages/Dashboard/Company/CompanyProifle/CompanyPro
 import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
 import AppliedJobs from "../Pages/Main/AppliedJobs/AppliedJobs";
 import Dashboard from "../Layout/Dashboard/Dashboard";
+import UpdateProfile from "../Pages/Main/UpdateProfile/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile></UpdateProfile>,
       },
 
       {
