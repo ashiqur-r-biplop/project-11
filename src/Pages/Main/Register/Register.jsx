@@ -111,7 +111,12 @@ const Register = () => {
             <br />
             <p>If you already sign out!!! go <Link to="/login" className="btn btn-active btn-link pl-0 lowercase text-lg ">Login...</Link></p>
             <p className='font-bold mb-2 mt-2'>Else register with_</p>
-                <button onClick={handleGoogle} className=" max-w-xs"><img className="hover:w-[98%] hover:mx-auto" src="https://i.ibb.co/9VW8PTj/Screenshot-2023-10-16-140038.png" alt="" /></button>
+            <div className="text-center">
+            <button onClick={handleGoogle} className="btn btn-circle btn-outline hover:bg-gray-300">
+                <span className="text-3xl font-bold text-blue-700">G</span>
+</button>
+<p>Google</p>
+            </div>
             </form>
   </div>
 </div>
