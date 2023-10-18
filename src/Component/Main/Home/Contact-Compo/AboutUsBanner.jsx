@@ -1,8 +1,7 @@
-import React from "react";
 
 const AboutUsBanner = () => {
   return (
-    <>
+    <div>
       <div className="w-full h-[181px] bg-hero-banner relative">
         <div className="w-full h-full flex justify-center items-center absolute bg-black opacity-75">
           <div className="w-[80%] h-full flex  items-center  absolute ">
@@ -15,7 +14,7 @@ const AboutUsBanner = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
-import React from 'react'
-import customer from '../../../../../src/assets/reviewCustomer.png';
+import customer from "../../../../../src/assets/reviewCustomer.png";
 
 const Testimonial = () => {
   return (
@@ -84,6 +83,6 @@ const Testimonial = () => {
       </div>
     </>
   );
-}
+};
 
-export default Testimonial
+export default Testimonial;

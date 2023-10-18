@@ -98,7 +98,7 @@ const JobsOfTheDay = () => {
             return (
               <div
                 key={d?.id}
-                className="border bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
+                className="border bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded ease-in-out delay-150  hover:-translate-y-2"
               >
                 <div className="flex items-start justify-between pb-5">
                   <div className="flex items-center gap-5">
@@ -112,6 +112,7 @@ const JobsOfTheDay = () => {
                   </div>
                   <span>flash icon</span>
                 </div>
+                
                 <div>
                   <h1 className="font-bold text-xl">{d?.Job_title}</h1>
                   <div className="flex items-center gap-10 text-gray-500 py-3">

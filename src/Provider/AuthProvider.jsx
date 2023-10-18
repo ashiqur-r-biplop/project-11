@@ -13,12 +13,13 @@ import app from "../firebase/firebase.config";
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null);
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [reload, setReload] = useState(true);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
 
-  const signUp = ( email, password) =>{
+  const signUp = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -46,17 +47,43 @@ const AuthProvider = ({children}) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth, current=>{
-        setUser(current);
-        //get and set token
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (current) => {
+      setUser(current);
+      setLoading(false);
+      setReload(false);
 
-        setLoading(false)
-    })
-    return ()=> {
-        return unsubscribe;
-    }
-},[])
+      // get current user email when an user login
+      if (current && current.email) {
+        const loggedUser = {
+          email: current.email,
+        };
+
+        // fetch jwt route from backend
+        // and post USER_ACCESS_TOKEN to backend
+        // and set USER_ACCESS_TOKEN to localStorage when an user login to website
+        // and remove USER_ACCESS_TOKEN from localStorage when user logout from website
+
+        fetch("https://job-box-server-phi.vercel.app/api/createJWT", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loggedUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("USER_ACCESS_TOKEN", data.token);
+          })
+          .catch((error) => console.log(error));
+      } else {
+        localStorage.removeItem("USER_ACCESS_TOKEN");
+      }
+    });
+    return () => {
+      return unsubscribe;
+    };
+  }, [reload]);
 
   const authInfo = {
     user,
@@ -65,13 +92,13 @@ const AuthProvider = ({children}) => {
     updateUserProfile,
     login,
     logOut,
+    setReload,
     googleSignIn,
   };
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
-
 };
 
 export default AuthProvider;
