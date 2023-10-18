@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import axios from "axios";
 
 const Register = () => {
   const { signUp, updateUserProfile, googleSignIn, setReload } =
@@ -42,7 +43,20 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUserProfile(name, photo);
+        const newUser = { name, email, photo, uerRole: 'jobSeeker' }
+        updateUserProfile(name, photo)
+          .then(res => {
+            axios.post('', newUser)
+              .then(res => {
+                console.log(res.data);
+              })
+              .catch(err => {
+                console.log("Error from Register", err);
+              })
+          })
+          .catch(err => {
+            console.log(err);
+          })
         form.reset();
         Swal.fire({
           icon: "success",
