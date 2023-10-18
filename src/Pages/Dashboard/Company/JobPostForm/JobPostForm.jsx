@@ -27,7 +27,7 @@ function JobPostForm() {
 
     // Set here fetch data route
 
-    fetch("", {
+    fetch("http://localhost:7070/api/jobPost", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,7 @@ function JobPostForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.acknowledged === true) {
+        if (data.status === "Success") {
           Swal.fire({
             icon: "success",
             title: "Job Post Successfully",
