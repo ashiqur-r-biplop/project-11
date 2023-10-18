@@ -29,7 +29,7 @@ function JobPostForm() {
 
     // Set here fetch data route
 
-    fetch("https://job-portal-server-ebon.vercel.app/user/jobPost", {
+    fetch("https://job-portal-server-ebon.vercel.app/job-post", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -39,7 +39,7 @@ function JobPostForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.status === "success") {
+        if (data.insertedId) {
           Swal.fire({
             icon: "success",
             title: "Job Post Successfully",
@@ -55,7 +55,7 @@ function JobPostForm() {
           });
         }
       })
-      .finally(() => {});
+      .finally(() => { });
   };
 
   const handleSelectedRequiredQualifications = (e) => {
