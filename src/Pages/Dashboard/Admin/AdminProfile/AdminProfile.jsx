@@ -19,7 +19,7 @@ const AdminProfile = () => {
           <div className="md:w-[30%] rounded p-4 bg-zinc-100">
             <div className="flex flex-col items-center">
 
-              <img className="h-52 rounded-full" src={user?.photoURL} alt="" />
+              <img className="rounded-full  w-[200px] h-[200px]" src={user?.photoURL} alt="" />
             </div>
             <br />
             <label htmlFor="my_modal_7" className="btn btn-block bg-blue-500 hover:bg-blue-700 text-white">Update</label>
