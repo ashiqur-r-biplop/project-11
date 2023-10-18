@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { FaHeart } from "react-icons/fa";
 const AllJobs = () => {
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
@@ -79,7 +79,7 @@ const AllJobs = () => {
                           <p>location</p>
                         </div>
                       </div>
-                      <span>flash icon</span>
+                      <span><FaHeart/></span>
                     </div>
                     <div>
                       <h1 className="font-bold text-xl">{d?.Job_title}</h1>
@@ -129,8 +129,89 @@ const AllJobs = () => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <form className="menu p-4 w-80 min-h-full bg-base-200 form-control">
-              {/* Sidebar content here */}
+
+<div
+           className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
+            {/* Sidebar content here */}
+          
+            <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
+              <div className="ms-20 mt-2">
+               <label htmlFor="full">
+
+                <input type="checkbox" name="full" value="full" id="full"/> <span className="ms-4">Full</span>
+               </label>
+                 
+                <br />
+                <label htmlFor="part">
+
+                <input type="checkbox" name="part" value="part" id="part"   /> <span className="ms-4">Part</span>
+                </label>
+                 
+                <br />
+                <label htmlFor="remote">
+
+                <input type="checkbox" name="remote" value="remote" id="remote"   /> <span className="ms-4">Remote</span>
+                </label>
+                 
+              </div>
+             
+            
+            <h3 className="text-center text-xl my-2 font-bold">Position </h3>
+              <div className="ms-20 mt-2">
+               <label htmlFor="senior">
+
+                <input type="checkbox" name="name" value="senior" id="senior"  /> <span className="ms-4">Senior</span>
+               </label>
+                
+                  
+                <br />
+                <label>
+
+                <input type="checkbox" name="name" value='junior'   /> <span className="ms-4">Junior</span>
+                </label>
+                 
+              
+                <br />
+                <label>
+
+                <input type="checkbox" name="name" value='fresher'   /> <span className="ms-4">Fresher</span>
+                </label>
+                 
+              </div>
+            
+            <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
+                
+            <div className="ms-20 mt-2"  >
+                <label>
+
+                <input type="checkbox" value='on-site'   /> <span className="ms-4">On-Site</span>   <br />
+                </label>
+                <label>
+
+                <input type="checkbox" value='remote'   /> <span className="ms-4">Remote</span>   <br />
+                </label>
+                <label>
+                <input type="checkbox" value='hybrid'  /> <span className="ms-4"> Hybrid</span>  
+                </label>
+                
+                
+           </div>
+          </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AllJobs;
+
+/*
+
+{/* <form className="menu p-4 w-80 min-h-full bg-base-200 form-control">
+              
               <h2 className="text-center text-xl font-bold">Job type</h2>
               <div className="from-check">
                 <input type="checkbox" name="name" id="" />
@@ -193,12 +274,6 @@ const AllJobs = () => {
                   Hybrid
                 </label>
               </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+</form> 
 
-export default AllJobs;
+*/
