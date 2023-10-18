@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
@@ -28,8 +29,7 @@ function JobPostForm() {
     const mergedData = { ...data, qualifications };
 
     // Set here fetch data route
-
-    fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
+    fetch("http://localhost:7070/api/jobPost", {
       method: "POST",
       headers: {
         "content-type": "application/json",

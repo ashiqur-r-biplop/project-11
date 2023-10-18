@@ -47,7 +47,8 @@ const Register = () => {
         const newUser = { name, email, image: photo, uerRole: "jobSeeker" };
         updateUserProfile(name, photo)
           .then((res) => {
-            axios.post("https://job-box-server-phi.vercel.app/api/userRoleSet", newUser)
+            axios
+              .post("https://job-portal-server-ebon.vercel.app/user", newUser)
               .then((res) => {
                 console.log(res, 52);
               })
