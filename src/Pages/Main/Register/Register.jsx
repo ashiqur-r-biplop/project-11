@@ -50,7 +50,9 @@ const Register = () => {
             axios
               .post("https://job-portal-server-ebon.vercel.app/user", newUser)
               .then((res) => {
-                console.log(res, 52);
+                if (res?.data?.insertedId == true) {
+                  console.log("object");
+                }
               })
               .catch((err) => {
                 console.log("Error from Register", err);

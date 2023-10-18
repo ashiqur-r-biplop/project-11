@@ -29,7 +29,8 @@ function JobPostForm() {
     const mergedData = { ...data, qualifications };
 
     // Set here fetch data route
-    fetch("http://localhost:7070/api/jobPost", {
+
+    fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
       method: "POST",
       headers: {
         "content-type": "application/json",
