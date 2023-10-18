@@ -84,7 +84,13 @@ const Login = () => {
         </form>
         <p>New in this site!!! Please <Link to="/register" className="btn btn-active btn-link pl-0 lowercase text-lg ">Register...</Link></p>
         <p className='font-bold mb-2'>Else register with_</p>
-         <button onClick={handleGoogle} className=""><img className="w-full h-14 hover:w-[98%] hover:mx-auto" src="https://i.ibb.co/nrqk8p1/google-Button.png" alt="" /></button>
+        <div className="text-center">
+            <button onClick={handleGoogle} className="btn btn-circle btn-outline hover:bg-gray-300">
+                <span className="text-3xl font-bold text-blue-700">G</span>
+                
+</button>
+<p>Google</p>
+            </div>
   </div>
 </div>
 </div>
