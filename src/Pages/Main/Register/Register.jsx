@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 // import React from 'react';
 
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import axios from "axios";
 
 const Register = () => {
   const { signUp, updateUserProfile, googleSignIn, setReload } =
@@ -42,7 +44,20 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUserProfile(name, photo);
+        const newUser = { name, email, image: photo, uerRole: "jobSeeker" };
+        updateUserProfile(name, photo)
+          .then((res) => {
+            axios.post("https://job-box-server-phi.vercel.app/api/userRoleSet", newUser)
+              .then((res) => {
+                console.log(res, 52);
+              })
+              .catch((err) => {
+                console.log("Error from Register", err);
+              });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
         form.reset();
         Swal.fire({
           icon: "success",
@@ -68,7 +83,7 @@ const Register = () => {
           title: "Wow!",
           text: "Register Successfully",
         });
-        setReload(true)
+        setReload(true);
         navigate(from, { replace: true });
       })
       .catch((error) => setError(error.message));
