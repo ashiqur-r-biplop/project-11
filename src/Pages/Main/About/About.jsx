@@ -5,6 +5,7 @@ import img2 from '../../../assets/about_img1.png';
 import { FaHome } from 'react-icons/fa';
 import HappyCustomer from './HappyCustomer';
 import Team from './Team';
+import Testimonial from '../../../Component/Main/Home/Contact-Compo/Testimonial';
 
 const About = () => {
   return (
@@ -50,7 +51,7 @@ const About = () => {
         </div>
       </section>
       <Team></Team>
-      <HappyCustomer></HappyCustomer>
+      <Testimonial></Testimonial>
     </div>
   );
 };
