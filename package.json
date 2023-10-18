@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nivo/bump": "^0.83.0",
+    "@nivo/heatmap": "^0.83.0",
+    "@nivo/line": "^0.83.0",
     "esbuild": "^0.19.4",
     "firebase": "^10.5.0",
     "localforage": "^1.10.0",
