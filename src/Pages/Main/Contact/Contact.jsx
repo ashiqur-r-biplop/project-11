@@ -12,6 +12,7 @@ const Contact = () => {
           <ContactForm />
           <OurTeam />
           <Testimonial/>
+      
       </>
   )
 }
