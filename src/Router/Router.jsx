@@ -13,6 +13,7 @@ import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
 import AppliedJobs from "../Pages/Main/AppliedJobs/AppliedJobs";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import UpdateProfile from "../Pages/Main/UpdateProfile/UpdateProfile";
+import JobPostForm from "../Pages/Dashboard/Company/JobPostForm/JobPostForm";
 
 export const router = createBrowserRouter([
   {
@@ -77,5 +78,11 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard/post-job",
+        element: <JobPostForm></JobPostForm>,
+      },
+    ],
   },
 ]);
