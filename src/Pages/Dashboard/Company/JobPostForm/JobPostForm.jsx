@@ -29,7 +29,7 @@ function JobPostForm() {
 
     // Set here fetch data route
 
-    fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
+    fetch("https://job-portal-server-ebon.vercel.app/user/jobPost", {
       method: "POST",
       headers: {
         "content-type": "application/json",

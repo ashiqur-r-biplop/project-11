@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
         // and set USER_ACCESS_TOKEN to localStorage when an user login to website
         // and remove USER_ACCESS_TOKEN from localStorage when user logout from website
 
-        fetch("https://job-box-server-phi.vercel.app/api/createJWT", {
+        fetch("https://job-portal-server-ebon.vercel.app/jwt", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
