@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import React from 'react';
 
 import { useContext, useState } from "react";
@@ -43,20 +44,23 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        const newUser = { name, email, photo, uerRole: 'jobSeeker' }
+        const newUser = { name, email, image: photo, uerRole: "jobSeeker" };
         updateUserProfile(name, photo)
-          .then(res => {
-            axios.post('', newUser)
-              .then(res => {
-                console.log(res.data);
+          .then((res) => {
+            axios
+              .post("https://job-portal-server-ebon.vercel.app/user", newUser)
+              .then((res) => {
+                if (res?.data?.insertedId == true) {
+                  console.log("object");
+                }
               })
-              .catch(err => {
+              .catch((err) => {
                 console.log("Error from Register", err);
-              })
+              });
           })
-          .catch(err => {
+          .catch((err) => {
             console.log(err);
-          })
+          });
         form.reset();
         Swal.fire({
           icon: "success",
@@ -82,7 +86,7 @@ const Register = () => {
           title: "Wow!",
           text: "Register Successfully",
         });
-        setReload(true)
+        setReload(true);
         navigate(from, { replace: true });
       })
       .catch((error) => setError(error.message));

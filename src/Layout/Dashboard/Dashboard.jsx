@@ -3,6 +3,7 @@ import { ResponsiveHeatMap } from "@nivo/heatmap";
 import { ResponsiveLine } from "@nivo/line";
 import { useState } from "react";
 import { RiArrowGoBackLine, RiArrowGoForwardLine } from "react-icons/ri";
+import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const [drawer, setDrawer] = useState(true);
@@ -913,6 +914,7 @@ const Dashboard = () => {
   ];
   return (
     <div className="grid grid-cols-12 relative">
+      {/* sidebar */}
       <div
         className={`col-span-2 ${
           drawer
@@ -935,6 +937,9 @@ const Dashboard = () => {
               )}
             </button>
           </div>
+          <div className="flex flex-col text-white justify-between items-center gap-5 border">
+            <Link to="/dashboard/post-job">Job Post</Link>
+          </div>
         </div>
       </div>
       <div
@@ -944,173 +949,176 @@ const Dashboard = () => {
             : "lg:-translate-x-[250px] md:-translate-x-[50px]  transition-all"
         } col-span-10 overflow-hidden ease-in-out delay-0`}
       >
-        <div className="md:flex justify-between items-center">
-          <div className="md:w-[50%] h-[400px]  w-full ">
-            <ResponsiveBump
-              data={ResponsiveBumpData}
-              colors={{ scheme: "spectral" }}
-              lineWidth={3}
-              activeLineWidth={6}
-              inactiveLineWidth={3}
-              inactiveOpacity={0.15}
-              pointSize={10}
-              activePointSize={16}
-              inactivePointSize={0}
-              pointColor={{ theme: "background" }}
-              pointBorderWidth={3}
-              activePointBorderWidth={3}
-              pointBorderColor={{ from: "serie.color" }}
-              axisTop={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "",
-                legendPosition: "middle",
-                legendOffset: -36,
-              }}
-              axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "",
-                legendPosition: "middle",
-                legendOffset: 32,
-              }}
-              axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "ranking",
-                legendPosition: "middle",
-                legendOffset: -40,
-              }}
-              margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
-              axisRight={null}
-            />
-          </div>
-          <div className="md:w-[50%] h-[400px]  w-full ">
-            <ResponsiveLine
-              data={ResponsiveLineData}
-              margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-              xScale={{ type: "point" }}
-              yScale={{
-                type: "linear",
-                min: "auto",
-                max: "auto",
-                stacked: true,
-                reverse: false,
-              }}
-              yFormat=" >-.2f"
-              axisTop={null}
-              axisRight={null}
-              axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "transportation",
-                legendOffset: 36,
-                legendPosition: "middle",
-              }}
-              axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "count",
-                legendOffset: -40,
-                legendPosition: "middle",
-              }}
-              pointSize={10}
-              pointColor={{ theme: "background" }}
-              pointBorderWidth={2}
-              pointBorderColor={{ from: "serieColor" }}
-              pointLabelYOffset={-12}
-              useMesh={true}
-              legends={[
-                {
-                  anchor: "bottom-right",
-                  direction: "column",
-                  justify: false,
-                  translateX: 100,
-                  translateY: 0,
-                  itemsSpacing: 0,
-                  itemDirection: "left-to-right",
-                  itemWidth: 80,
-                  itemHeight: 20,
-                  itemOpacity: 0.75,
-                  symbolSize: 12,
-                  symbolShape: "circle",
-                  symbolBorderColor: "rgba(0, 0, 0, .5)",
-                  effects: [
-                    {
-                      on: "hover",
-                      style: {
-                        itemBackground: "rgba(0, 0, 0, .03)",
-                        itemOpacity: 1,
+        <div>
+          <div className="md:flex justify-between items-center">
+            <div className="md:w-[50%] h-[400px]  w-full ">
+              <ResponsiveBump
+                data={ResponsiveBumpData}
+                colors={{ scheme: "spectral" }}
+                lineWidth={3}
+                activeLineWidth={6}
+                inactiveLineWidth={3}
+                inactiveOpacity={0.15}
+                pointSize={10}
+                activePointSize={16}
+                inactivePointSize={0}
+                pointColor={{ theme: "background" }}
+                pointBorderWidth={3}
+                activePointBorderWidth={3}
+                pointBorderColor={{ from: "serie.color" }}
+                axisTop={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "",
+                  legendPosition: "middle",
+                  legendOffset: -36,
+                }}
+                axisBottom={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "",
+                  legendPosition: "middle",
+                  legendOffset: 32,
+                }}
+                axisLeft={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "ranking",
+                  legendPosition: "middle",
+                  legendOffset: -40,
+                }}
+                margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
+                axisRight={null}
+              />
+            </div>
+            <div className="md:w-[50%] h-[400px]  w-full ">
+              <ResponsiveLine
+                data={ResponsiveLineData}
+                margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+                xScale={{ type: "point" }}
+                yScale={{
+                  type: "linear",
+                  min: "auto",
+                  max: "auto",
+                  stacked: true,
+                  reverse: false,
+                }}
+                yFormat=" >-.2f"
+                axisTop={null}
+                axisRight={null}
+                axisBottom={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "transportation",
+                  legendOffset: 36,
+                  legendPosition: "middle",
+                }}
+                axisLeft={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "count",
+                  legendOffset: -40,
+                  legendPosition: "middle",
+                }}
+                pointSize={10}
+                pointColor={{ theme: "background" }}
+                pointBorderWidth={2}
+                pointBorderColor={{ from: "serieColor" }}
+                pointLabelYOffset={-12}
+                useMesh={true}
+                legends={[
+                  {
+                    anchor: "bottom-right",
+                    direction: "column",
+                    justify: false,
+                    translateX: 100,
+                    translateY: 0,
+                    itemsSpacing: 0,
+                    itemDirection: "left-to-right",
+                    itemWidth: 80,
+                    itemHeight: 20,
+                    itemOpacity: 0.75,
+                    symbolSize: 12,
+                    symbolShape: "circle",
+                    symbolBorderColor: "rgba(0, 0, 0, .5)",
+                    effects: [
+                      {
+                        on: "hover",
+                        style: {
+                          itemBackground: "rgba(0, 0, 0, .03)",
+                          itemOpacity: 1,
+                        },
                       },
-                    },
-                  ],
-                },
-              ]}
-            />
+                    ],
+                  },
+                ]}
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="md:w-[100%] h-[400px] w-full ">
-            <ResponsiveHeatMap
-              data={data}
-              margin={{ top: 60, right: 90, bottom: 60, left: 90 }}
-              valueFormat=">-.2s"
-              axisTop={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: -90,
-                legend: "",
-                legendOffset: 46,
-              }}
-              axisRight={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "country",
-                legendPosition: "middle",
-                legendOffset: 70,
-              }}
-              axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "country",
-                legendPosition: "middle",
-                legendOffset: -72,
-              }}
-              colors={{
-                type: "diverging",
-                scheme: "red_yellow_blue",
-                divergeAt: 0.5,
-                minValue: -100000,
-                maxValue: 100000,
-              }}
-              emptyColor="#555555"
-              legends={[
-                {
-                  anchor: "bottom",
-                  translateX: 0,
-                  translateY: 30,
-                  length: 400,
-                  thickness: 8,
-                  direction: "row",
-                  tickPosition: "after",
-                  tickSize: 3,
-                  tickSpacing: 4,
-                  tickOverlap: false,
-                  tickFormat: ">-.2s",
-                  title: "Value →",
-                  titleAlign: "start",
-                  titleOffset: 4,
-                },
-              ]}
-            />
+          <div className="flex justify-between items-center">
+            <div className="md:w-[100%] h-[400px] w-full ">
+              <ResponsiveHeatMap
+                data={data}
+                margin={{ top: 60, right: 90, bottom: 60, left: 90 }}
+                valueFormat=">-.2s"
+                axisTop={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: -90,
+                  legend: "",
+                  legendOffset: 46,
+                }}
+                axisRight={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "country",
+                  legendPosition: "middle",
+                  legendOffset: 70,
+                }}
+                axisLeft={{
+                  tickSize: 5,
+                  tickPadding: 5,
+                  tickRotation: 0,
+                  legend: "country",
+                  legendPosition: "middle",
+                  legendOffset: -72,
+                }}
+                colors={{
+                  type: "diverging",
+                  scheme: "red_yellow_blue",
+                  divergeAt: 0.5,
+                  minValue: -100000,
+                  maxValue: 100000,
+                }}
+                emptyColor="#555555"
+                legends={[
+                  {
+                    anchor: "bottom",
+                    translateX: 0,
+                    translateY: 30,
+                    length: 400,
+                    thickness: 8,
+                    direction: "row",
+                    tickPosition: "after",
+                    tickSize: 3,
+                    tickSpacing: 4,
+                    tickOverlap: false,
+                    tickFormat: ">-.2s",
+                    title: "Value →",
+                    titleAlign: "start",
+                    titleOffset: 4,
+                  },
+                ]}
+              />
+            </div>
           </div>
+          <Outlet></Outlet>
         </div>
       </div>
     </div>

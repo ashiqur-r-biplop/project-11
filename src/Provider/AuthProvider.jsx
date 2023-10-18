@@ -54,31 +54,31 @@ const AuthProvider = ({ children }) => {
       setReload(false);
 
       // get current user email when an user login
-      // if (current && current.email) {
-      //   const loggedUser = {
-      //     email: current.email,
-      //   };
+      if (current && current.email) {
+        const loggedUser = {
+          email: current.email,
+        };
 
-      //   // fetch jwt route from backend
-      //   // and post USER_ACCESS_TOKEN to backend
-      //   // and set USER_ACCESS_TOKEN to localStorage when an user login to website
-      //   // and remove USER_ACCESS_TOKEN from localStorage when user logout from website
+        // fetch jwt route from backend
+        // and post USER_ACCESS_TOKEN to backend
+        // and set USER_ACCESS_TOKEN to localStorage when an user login to website
+        // and remove USER_ACCESS_TOKEN from localStorage when user logout from website
 
-      //   fetch("http://localhost:7070/api/createJWT", {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(loggedUser),
-      //   })
-      //     .then((res) => res.json())
-      //     .then((data) => {
-      //       localStorage.setItem("USER_ACCESS_TOKEN", data.token);
-      //     })
-      //     .catch((error) => console.log(error));
-      // } else {
-      //   localStorage.removeItem("USER_ACCESS_TOKEN");
-      // }
+        fetch("https://job-portal-server-ebon.vercel.app/jwt", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loggedUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("USER_ACCESS_TOKEN", data.token);
+          })
+          .catch((error) => console.log(error));
+      } else {
+        localStorage.removeItem("USER_ACCESS_TOKEN");
+      }
     });
     return () => {
       return unsubscribe;
@@ -96,7 +96,9 @@ const AuthProvider = ({ children }) => {
     googleSignIn,
   };
 
-  return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;
