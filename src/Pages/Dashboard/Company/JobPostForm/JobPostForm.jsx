@@ -23,7 +23,7 @@ function JobPostForm() {
 
     // This mergedData is full form data
     const mergedData = { ...data, qualifications };
-    console.log(mergedData);
+
 
     // Set here fetch data route
 
@@ -37,14 +37,18 @@ function JobPostForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+<<<<<<< HEAD
+        if (data.status === 'success') {
+=======
         if (data.status === "Success") {
+>>>>>>> f4bc24e34416e0b5bd233d128796665930c22c47
           Swal.fire({
             icon: "success",
             title: "Job Post Successfully",
             showConfirmButton: false,
             timer: 1500,
           });
-          reset();
+          // reset();
         } else {
           Swal.fire({
             icon: "error",
@@ -53,7 +57,7 @@ function JobPostForm() {
           });
         }
       })
-      .finally(() => {});
+      .finally(() => { });
   };
 
   const handleSelectedRequiredQualifications = (e) => {

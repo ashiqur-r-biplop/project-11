@@ -81,7 +81,7 @@ const About = () => {
         </div>
       </section>
       <Team></Team>
-      <HappyCustomer></HappyCustomer>
+      <Testimonial></Testimonial>
     </div>
   );
 };
