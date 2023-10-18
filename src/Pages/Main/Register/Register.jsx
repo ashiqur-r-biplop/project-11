@@ -68,7 +68,7 @@ const Register = () => {
           title: "Wow!",
           text: "Register Successfully",
         });
-        setReload(true)
+        setReload(true);
         navigate(from, { replace: true });
       })
       .catch((error) => setError(error.message));

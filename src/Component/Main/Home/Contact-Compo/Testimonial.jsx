@@ -1,5 +1,7 @@
 const Testimonial = () => {
-  return <div>Testimonial</div>;
+  return <div>
+    
+  </div>;
 };
 
 export default Testimonial;
