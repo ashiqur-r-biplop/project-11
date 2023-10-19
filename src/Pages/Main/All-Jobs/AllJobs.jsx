@@ -9,13 +9,31 @@ const AllJobs = () => {
   useEffect(() => {
     fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
-  }, []);
-  console.log(jobs[24]?.preferredQualifications);
+      .then((data) => {
+        // const activeJobs = data.filter(d => d.status === 'active');
+        // setJobs(activeJobs)
+        setJobs(data);
+      });
+  }, [jobs]);
 
   // Handle Apply Job:
   const handleApplyJob = (job) => {
-    console.log(job);
+    const jobId = job?._id;
+    const applicantEmail = user?.user?.email;
+    const applyJob = { jobId, applicantEmail };
+    console.log(applyJob);
+
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(applyJob),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <section className="">

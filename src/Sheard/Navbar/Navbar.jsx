@@ -8,7 +8,6 @@ import useUserRole from "../../Hook/UseGetUserRole";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const { role } = useUserRole();
-  console.log(role);
   const navOptions = (
     <>
       <li className="text-lg">
@@ -38,11 +37,10 @@ const Navbar = () => {
       </li>
     </>
   );
-  console.log(user?.photoURL);
   const handleLogout = () => {
     logOut()
-      .then((res) => {})
-      .then((data) => {});
+      .then((res) => { })
+      .then((data) => { });
   };
   return (
     <div className="bg-gray-300 sticky top-0 z-[999]">

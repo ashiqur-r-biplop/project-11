@@ -70,7 +70,7 @@ const UpdateProfile = () => {
         Profile Update
       </h1>
       <div className="md:flex gap-6 p-6">
-        <div className="bg-zinc-50 rounded md:w-[30%] p-3 ">
+        <div className="bg-zinc-50 rounded drop-shadow-xl md:w-[30%] p-3 ">
           <section className="  flex flex-col justify-center items-center ">
             <img className="rounded-full mt-10" src={user?.photoURL} alt="" />
             <h1 className="text-2xl font-bold mt-2 text-blue-500">
@@ -121,7 +121,7 @@ const UpdateProfile = () => {
           </section>
         </div>
 
-        <div className="md:w-[70%] bg-zinc-50 rounded p-4">
+        <div className="md:w-[70%] drop-shadow-xl bg-zinc-50 rounded p-4">
           <form onSubmit={handleUpdate}>
             <div className="grid grid-cols-1  md:grid-cols-2  mx-auto md:gap-x-12">
               <div>
