@@ -12,10 +12,27 @@ const AllJobs = () => {
   }, []);
   console.log(jobs[24]?.preferredQualifications);
 
+  
+
   // Handle Apply Job:
-//   const handleApplyJob = job => {
-//     console.log(job);
-//   }
+  const handleApplyJob = job => {
+    const jobId = job?._id;
+    const applicantEmail = user?.user?.email;
+    const applyJob = { jobId, applicantEmail };
+    console.log(applyJob);
+
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(applyJob)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+  }
   return (
     <section className="">
       <div className="hero bg-[#f2f6fd] my-2 md:h-[50vh]">
@@ -72,7 +89,7 @@ const AllJobs = () => {
               {jobs?.map((d) => {
                console.log(d?.preferredQualifications,'okokoko');
                 return (
-                    <div
+                  <div
                     key={d?._id}
                     className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
@@ -86,7 +103,7 @@ const AllJobs = () => {
                         <div>
                           <h2 className="text-xl font-semibold">{d?.companyName}</h2>
                           <p>{d?.jobLocation}</p>
-                         
+
                         </div>
                       </div>
                       <span><FaHeart /></span>
@@ -100,27 +117,34 @@ const AllJobs = () => {
                         <p>{d?.remoteOrOnsite}</p>
                       </div>
                       <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
-                      
+
                     </div>
-                    <div className="flex   ">
-                      {d?.preferredQualifications }
-                      
-                   
-                      
+                    <div className="flex items-center gap-5 my-5">
+                      {d?.qualifications?.requiredQualifications.map((r, i) => {
+                        return (
+                          <div key={i}>
+                            <button className="bg-gray-400 px-2 rounded-lg w-f">
+                              {r}
+                            </button>
+                          </div>
+                        );
+                      })}
                     </div>
                     <div className="flex justify-between items-center py-3">
                       <h1>
                         <span className="text-[#3C65F6] text-xl ">
                           {d?.salaryRange}
                         </span>{" "}
-                        
+
                       </h1>
-                      <button   className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
+                      <button   className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]"
+                      onClick={handleApplyJob}
+                      >
                         Apply Now
-                        
+
                       </button>
                     </div>
-                  </div>  
+                  </div>
                 );
               })}
             </div>
