@@ -14,7 +14,8 @@ const Register = () => {
     googleSignIn,
     setReload,
     reloadRole,
-    setReloadRole,
+    setReloadRole, userLoading,
+    setUserLoading
   } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
@@ -58,6 +59,7 @@ const Register = () => {
               .then((res) => {
                 if (res?.data?.insertedId) {
                   setReload(false);
+                  setUserLoading(true);
                   setReloadRole(!reloadRole);
                   form.reset();
                   Swal.fire({
@@ -86,14 +88,28 @@ const Register = () => {
     googleSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        Swal.fire({
-          icon: "success",
-          title: "Wow!",
-          text: "Register Successfully",
-        });
-        setReload(false);
-        navigate(from, { replace: true });
+        const newUser = { name: user.name, email: user.email, image: user.photoURL, uerRole: "jobSeeker" };
+        console.log(user, 91);
+        axios
+          .post("https://job-portal-server-ebon.vercel.app/user", newUser)
+          .then((res) => {
+            if (res?.data?.insertedId) {
+              setReload(false);
+              setUserLoading(true);
+              setReloadRole(!reloadRole);
+
+
+              Swal.fire({
+                icon: "success",
+                title: "Wow!",
+                text: "Register Successfully",
+              });
+              navigate(from, { replace: true });
+            }
+          })
+          .catch((err) => {
+            console.log("Error from Register", err);
+          });
       })
       .catch((error) => setError(error.message));
   };
