@@ -8,12 +8,31 @@ const AllJobs = () => {
   useEffect(() => {
     fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => {
+        // const activeJobs = data.filter(d => d.status === 'active');
+        // setJobs(activeJobs)
+        setJobs(data);
+      });
   }, [jobs]);
 
   // Handle Apply Job:
   const handleApplyJob = job => {
-    console.log(job);
+    const jobId = job?._id;
+    const applicantEmail = user?.user?.email;
+    const applyJob = { jobId, applicantEmail };
+    console.log(applyJob);
+
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(applyJob)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
   }
   return (
     <section className="">
@@ -70,7 +89,7 @@ const AllJobs = () => {
               {/* card */}
               {jobs?.map((d) => {
                 return (
-                    <div
+                  <div
                     key={d?._id}
                     className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
@@ -82,7 +101,7 @@ const AllJobs = () => {
                         <div>
                           <h2 className="text-xl font-semibold">{d?.companyName}</h2>
                           <p>{d?.jobLocation}</p>
-                         
+
                         </div>
                       </div>
                       <span><FaHeart /></span>
@@ -96,10 +115,10 @@ const AllJobs = () => {
                         <p>{d?.remoteOrOnsite}</p>
                       </div>
                       <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
-                      
+
                     </div>
                     <div className="flex items-center gap-5 my-5">
-                      {d?.qualifications.requiredQualifications.map((r, i) => {
+                      {d?.qualifications?.requiredQualifications.map((r, i) => {
                         return (
                           <div key={i}>
                             <button className="bg-gray-400 px-2 rounded-lg w-f">
@@ -114,14 +133,14 @@ const AllJobs = () => {
                         <span className="text-[#3C65F6] text-xl ">
                           {d?.salaryRange}
                         </span>{" "}
-                        
+
                       </h1>
                       <button onClick={() => handleApplyJob(d)} className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
                         Apply Now
-                        
+
                       </button>
                     </div>
-                  </div>  
+                  </div>
                 );
               })}
             </div>
