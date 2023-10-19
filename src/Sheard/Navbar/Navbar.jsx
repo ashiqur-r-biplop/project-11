@@ -107,19 +107,25 @@ const Navbar = () => {
                     </li>
                   </>
                 ) : role == "admin" ? (
-                  <li>
-                    <Link to="/admin-profile">Admin Profile</Link>
-                  </li>
+                  <>
+                    <li>
+                      <Link to="/admin-profile">Admin Profile</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                  </>
                 ) : (
-                  <li>
-                    <Link to="/company-profile">company Profile</Link>
-                  </li>
+                  <>
+                    <li>
+                      <Link to="/company-profile">company Profile</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                  </>
                 )}
-                {role == "hiringManager" || role == "admin" && (
-                  <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                  </li>
-                )}
+
                 <li onClick={handleLogout}>
                   <Link>Logout</Link>
                 </li>
