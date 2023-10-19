@@ -11,8 +11,10 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../../Provider/AuthProvider";
 
+const img_hosting_token = "78422ad660e9653f2a0d56a913573772";
+
 function JobPostForm() {
-  const user = useContext(AuthContext)
+  const user = useContext(AuthContext);
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -25,59 +27,74 @@ function JobPostForm() {
     formState: { errors },
   } = useForm();
 
+  const img_hosting_Url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
   const onSubmit = (data) => {
-    const {
-      jobTitle,
-      companyName,
-      companyLogo,
-      jobLocation,
-      jobType,
-      jobCategory,
-      remoteOrOnsite,
-      salaryRange,
-      applicationDeadline,
-      contactEmail,
-      contactPhone,
-      companyWebsite,
-      applicationLink,
-      trackingId,
-      educationLevel,
-      experienceLevel,
-      jobDescription,
-      howToApply,
-      applicationInstructions,
-      equalOpportunityStatement,
-    } = data || {};
-    const mergedData = {
-      jobTitle,
-      companyName,
-      companyLogo,
-      jobLocation,
-      jobType,
-      jobCategory,
-      remoteOrOnsite,
-      salaryRange,
-      applicationDeadline,
-      contactEmail,
-      contactPhone,
-      companyWebsite,
-      applicationLink,
-      trackingId,
-      educationLevel,
-      experienceLevel,
-      jobDescription,
-      howToApply,
-      applicationInstructions,
-      equalOpportunityStatement,
-      requiredQualifications: selectedRequiredQualifications,
-      preferredQualifications: selectedPreferredQualifications,
-    };
-    // Set here fetch data route
+     const formData = new FormData()
+          formData.append('image', data.companyLogo[0])
+
+    fetch(img_hosting_Url,{
+     method:'POST',
+     body: formData,
+})
+.then(res=>res.json())
+.then(imgResponse=>{
+     console.log(imgResponse);
+     if(imgResponse.success){
+          const imgUrl = imgResponse.data.display_url;
+          const {
+               jobTitle,
+               companyName,
+               companyLogo,
+               jobLocation,
+               jobType,
+               jobCategory,
+               remoteOrOnsite,
+               salaryRange,
+               applicationDeadline,
+               contactEmail,
+               contactPhone,
+               companyWebsite,
+               applicationLink,
+               trackingId,
+               educationLevel,
+               experienceLevel,
+               jobDescription,
+               howToApply,
+               applicationInstructions,
+               equalOpportunityStatement,
+             } = data || {};
+             const mergedData = {
+               jobTitle,
+               companyName,
+               companyLogo:imgUrl,
+               jobLocation,
+               jobType,
+               jobCategory,
+               remoteOrOnsite,
+               salaryRange,
+               applicationDeadline,
+               contactEmail,
+               contactPhone,
+               companyWebsite,
+               applicationLink,
+               trackingId,
+               educationLevel,
+               experienceLevel,
+               jobDescription,
+               howToApply,
+               applicationInstructions,
+               equalOpportunityStatement,
+               requiredQualifications: selectedRequiredQualifications,
+               preferredQualifications: selectedPreferredQualifications,
+             };
+          console.log(imgUrl, "+logo+", companyLogo);
+          // Set here fetch data route
 
 <<<<<<< HEAD
     fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
 =======
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
+<<<<<<< HEAD
 >>>>>>> b70d8125b9b1606d45acb5da556b1deec1dfb7df
       method: "POST",
       headers: {
@@ -107,6 +124,43 @@ function JobPostForm() {
       .catch((err) => {
         console.log(err);
       });
+=======
+     method: "POST",
+     headers: {
+       "content-type": "application/json",
+     },
+     body: JSON.stringify(mergedData),
+   })
+     .then((res) => res.json())
+     .then((data) => {
+       console.log(data);
+       if (data.insertedId) {
+         Swal.fire({
+           icon: "success",
+           title: "Job Post Successfully",
+           showConfirmButton: false,
+           timer: 1500,
+         });
+         // reset();
+       } else {
+         Swal.fire({
+           icon: "error",
+           title: "Oops...",
+           text: "Failed to post job!",
+         });
+       }
+     })
+     .catch((err) => {
+       console.log(err);
+     });
+     }
+})
+
+
+
+
+
+>>>>>>> 04452a1beab3ab620aaa4252c57b704cf6c2093a
   };
 
   const handleSelectedRequiredQualifications = (e) => {
@@ -411,7 +465,8 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
-              defaultValue={user?.user?.email} disabled={true}
+              defaultValue={user?.user?.email}
+          //     disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>

@@ -8,7 +8,6 @@ import useUserRole from "../../Hook/UseGetUserRole";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const { role } = useUserRole();
-  console.log(role);
   const navOptions = (
     <>
       <li className="text-lg">
@@ -38,11 +37,10 @@ const Navbar = () => {
       </li>
     </>
   );
-  console.log(user?.photoURL);
   const handleLogout = () => {
     logOut()
-      .then((res) => {})
-      .then((data) => {});
+      .then((res) => { })
+      .then((data) => { });
   };
   return (
     <div className="bg-gray-300 sticky top-0 z-[999]">
@@ -107,19 +105,25 @@ const Navbar = () => {
                     </li>
                   </>
                 ) : role == "admin" ? (
-                  <li>
-                    <Link to="/admin-profile">Admin Profile</Link>
-                  </li>
+                  <>
+                    <li>
+                      <Link to="/admin-profile">Admin Profile</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                  </>
                 ) : (
-                  <li>
-                    <Link to="/company-profile">company Profile</Link>
-                  </li>
+                  <>
+                    <li>
+                      <Link to="/company-profile">company Profile</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                  </>
                 )}
-                {role == "hiringManager" || role == "admin" && (
-                  <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                  </li>
-                )}
+
                 <li onClick={handleLogout}>
                   <Link>Logout</Link>
                 </li>

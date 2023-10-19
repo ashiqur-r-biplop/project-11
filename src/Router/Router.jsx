@@ -15,8 +15,6 @@ import Dashboard from "../Layout/Dashboard/Dashboard";
 import UpdateProfile from "../Pages/Main/UpdateProfile/UpdateProfile";
 import DashboardHome from "../Component/DashBoard/DashboardHome/DashboardHome";
 import JobPostForm from "../Pages/Dashboard/Company/JobPostForm/JobPostForm";
-import AllPostedJobs from "../Component/Main/Home/AllPostedJobs";
-import AppliedPersons from "../Component/Main/Home/AppliedPersons";
 
 export const router = createBrowserRouter([
   {
@@ -55,26 +53,49 @@ export const router = createBrowserRouter([
 
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update-profile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
 
       {
         path: "/company-profile",
-        element: <CompanyProfile></CompanyProfile>,
+        element: (
+          <PrivateRoute>
+            <HiringManagerRole>
+              <CompanyProfile></CompanyProfile>
+            </HiringManagerRole>
+          </PrivateRoute>
+        ),
       },
 
       {
         path: "/admin-profile",
-        element: <AdminProfile></AdminProfile>,
+        element: (
+          <PrivateRoute>
+            <AdminRoute>
+              <AdminProfile></AdminProfile>
+            </AdminRoute>
+          </PrivateRoute>
+        ),
       },
-
       {
         path: "/applied-jobs",
-        element: <AppliedJobs></AppliedJobs>,
+        element: (
+          <PrivateRoute>
+            <AppliedJobs></AppliedJobs>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/allposted-jobs",
@@ -88,15 +109,51 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/dashboard",
-        element: <DashboardHome></DashboardHome>,
+        element: (
+          <PrivateRoute>
+            <DashboardHome></DashboardHome>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/post-job",
-        element: <JobPostForm></JobPostForm>,
+        element: (
+          <HiringManagerRole>
+            <JobPostForm></JobPostForm>
+          </HiringManagerRole>
+        ),
+      },
+      {
+        path: "/dashboard/my-jobs",
+        element: (
+          <HiringManagerRole>
+            <MyJobs></MyJobs>
+          </HiringManagerRole>
+        ),
+      },
+      {
+        path: "/dashboard/all-user",
+        element: (
+          <AdminRoute>
+            <AllUser></AllUser>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/all-Jobs",
+        element: (
+          <AdminRoute>
+            <AllJobsAdmin></AllJobsAdmin>
+          </AdminRoute>
+        ),
       },
     ],
   },

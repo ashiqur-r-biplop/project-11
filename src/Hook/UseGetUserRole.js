@@ -8,9 +8,7 @@ const useUserRole = () => {
   const [role, setRole] = useState("");
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
-  console.log(user, 11, "hook");
   useEffect(() => {
-    console.log(user);
     if (user) {
       axiosSecure
         .get(`/user-role/${user?.email}`)
