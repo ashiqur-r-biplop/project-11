@@ -115,7 +115,7 @@ const Navbar = () => {
                     <Link to="/company-profile">company Profile</Link>
                   </li>
                 )}
-                {role == "hiringManager" && role == "admin" && (
+                {role == "hiringManager" || role == "admin" && (
                   <li>
                     <Link to="/dashboard">Dashboard</Link>
                   </li>
