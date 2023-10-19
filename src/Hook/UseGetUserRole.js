@@ -1,17 +1,30 @@
+"use client";
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
 import useAxiosSecure from "./useAxiosSecure";
+import { AuthContext } from "../Provider/AuthProvider";
 
-const UseGetUserRole = () => {
+const useUserRole = () => {
+  const { axiosSecure } = useAxiosSecure();
+  const [role, setRole] = useState("");
+  const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
-  const [role, setRole] = useState({});
-  const axiosSecure = useAxiosSecure();
+  console.log(user, 11, "hook");
   useEffect(() => {
-    axiosSecure
-      .get(`/user-role/${user?.email}`)
-      .then((res) => setRole(res.userRole));
-  }, [user]);
-  return { role };
+    console.log(user);
+    if (user) {
+      axiosSecure
+        .get(`/user-role/${user?.email}`)
+        .then((res) => {
+          setRole(res.data.role);
+          setLoading(false);
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
+    }
+    // }
+  }, [axiosSecure, user]);
+  return { role, loading };
 };
 
-export default UseGetUserRole;
+export default useUserRole;
