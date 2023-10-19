@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { AuthContext } from "../../../Provider/AuthProvider";
@@ -87,26 +88,31 @@ const AllJobs = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
-               console.log(d?.preferredQualifications,'okokoko');
+                console.log(d?.preferredQualifications, "okokoko");
                 return (
                   <div
                     key={d?._id}
                     className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
-                    
-                     
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
                         <div className=" rounded-xl">
-                          <img className="rounded-xl w-[50px] h-[50px]" src={d?.companyLogo} alt="photo" />
+                          <img
+                            className="rounded-xl w-[50px] h-[50px]"
+                            src={d?.companyLogo}
+                            alt="photo"
+                          />
                         </div>
                         <div>
-                          <h2 className="text-xl font-semibold">{d?.companyName}</h2>
+                          <h2 className="text-xl font-semibold">
+                            {d?.companyName}
+                          </h2>
                           <p>{d?.jobLocation}</p>
-
                         </div>
                       </div>
-                      <span><FaHeart /></span>
+                      <span>
+                        <FaHeart />
+                      </span>
                     </div>
                     <div>
                       <h1 className="font-bold text-xl">{d?.jobTitle}</h1>
@@ -116,32 +122,34 @@ const AllJobs = () => {
                         <p>{d?.jobCategory}</p>
                         <p>{d?.remoteOrOnsite}</p>
                       </div>
-                      <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
-
+                      <p className="py-3">
+                        {d?.jobDescription.slice(0, 40)}...
+                      </p>
                     </div>
                     <div className="flex items-center gap-5 my-5">
-                      {d?.qualifications?.requiredQualifications.map((r, i) => {
-                        return (
-                          <div key={i}>
-                            <button className="bg-gray-400 px-2 rounded-lg w-f">
-                              {r}
-                            </button>
-                          </div>
-                        );
-                      })}
+                      {d?.qualifications?.requiredQualifications?.map(
+                        (r, i) => {
+                          return (
+                            <div key={i}>
+                              <button className="bg-gray-400 px-2 rounded-lg w-f">
+                                {r}
+                              </button>
+                            </div>
+                          );
+                        }
+                      )}
                     </div>
                     <div className="flex justify-between items-center py-3">
                       <h1>
                         <span className="text-[#3C65F6] text-xl ">
                           {d?.salaryRange}
                         </span>{" "}
-
                       </h1>
-                      <button   className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]"
-                      onClick={handleApplyJob}
+                      <button
+                        onClick={() => handleApplyJob(d)}
+                        className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]"
                       >
                         Apply Now
-
                       </button>
                     </div>
                   </div>
@@ -163,75 +171,78 @@ const AllJobs = () => {
               className="drawer-overlay"
             ></label>
 
-            <div
-              className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
+            <div className="menu p-4 w-80 min-h-full bg-base-200 inputs">
               {/* Sidebar content here */}
 
               <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
               <div className="ms-20 mt-2">
                 <label htmlFor="full">
-
-                  <input type="checkbox" name="full" value="full" id="full" /> <span className="ms-4">Full</span>
+                  <input type="checkbox" name="full" value="full" id="full" />{" "}
+                  <span className="ms-4">Full</span>
                 </label>
 
                 <br />
                 <label htmlFor="part">
-
-                  <input type="checkbox" name="part" value="part" id="part" /> <span className="ms-4">Part</span>
+                  <input type="checkbox" name="part" value="part" id="part" />{" "}
+                  <span className="ms-4">Part</span>
                 </label>
 
                 <br />
                 <label htmlFor="remote">
-
-                  <input type="checkbox" name="remote" value="remote" id="remote" /> <span className="ms-4">Remote</span>
+                  <input
+                    type="checkbox"
+                    name="remote"
+                    value="remote"
+                    id="remote"
+                  />{" "}
+                  <span className="ms-4">Remote</span>
                 </label>
-
               </div>
-
 
               <h3 className="text-center text-xl my-2 font-bold">Position </h3>
               <div className="ms-20 mt-2">
                 <label htmlFor="senior">
-
-                  <input type="checkbox" name="name" value="senior" id="senior" /> <span className="ms-4">Senior</span>
+                  <input
+                    type="checkbox"
+                    name="name"
+                    value="senior"
+                    id="senior"
+                  />{" "}
+                  <span className="ms-4">Senior</span>
                 </label>
-
 
                 <br />
                 <label>
-
-                  <input type="checkbox" name="name" value='junior' /> <span className="ms-4">Junior</span>
+                  <input type="checkbox" name="name" value="junior" />{" "}
+                  <span className="ms-4">Junior</span>
                 </label>
-
 
                 <br />
                 <label>
-
-                  <input type="checkbox" name="name" value='fresher' /> <span className="ms-4">Fresher</span>
+                  <input type="checkbox" name="name" value="fresher" />{" "}
+                  <span className="ms-4">Fresher</span>
                 </label>
-
               </div>
 
-              <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
+              <h3 className="text-center text-xl my-2 font-bold">
+                On-Site / Remote{" "}
+              </h3>
 
-              <div className="ms-20 mt-2"  >
+              <div className="ms-20 mt-2">
                 <label>
-
-                  <input type="checkbox" value='on-site' /> <span className="ms-4">On-Site</span>   <br />
+                  <input type="checkbox" value="on-site" />{" "}
+                  <span className="ms-4">On-Site</span> <br />
                 </label>
                 <label>
-
-                  <input type="checkbox" value='remote' /> <span className="ms-4">Remote</span>   <br />
+                  <input type="checkbox" value="remote" />{" "}
+                  <span className="ms-4">Remote</span> <br />
                 </label>
                 <label>
-                  <input type="checkbox" value='hybrid' /> <span className="ms-4"> Hybrid</span>
+                  <input type="checkbox" value="hybrid" />{" "}
+                  <span className="ms-4"> Hybrid</span>
                 </label>
-
-
               </div>
             </div>
-
-
           </div>
         </div>
       </div>

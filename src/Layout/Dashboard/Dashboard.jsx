@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { RiArrowGoBackLine, RiArrowGoForwardLine } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
+import useUserRole from "../../Hook/UseGetUserRole";
 
 const Dashboard = () => {
   const [drawer, setDrawer] = useState(true);
-
+  const { role } = useUserRole();
   return (
     <div className="grid grid-cols-12 relative">
       {/* sidebar */}
@@ -31,7 +32,18 @@ const Dashboard = () => {
             </button>
           </div>
           <div className="flex flex-col text-white justify-between items-center gap-5 border">
-            <Link to="/dashboard/post-job">Job Post</Link>
+            {role == "hiringManager" ? (
+              <>
+                {" "}
+                <Link to="/dashboard/post-job">Job Post</Link>
+                <Link to="/dashboard/my-jobs">my jobs</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard/all-user">all user</Link>
+                <Link to="/dashboard/all-Jobs">All Jobs</Link>
+              </>
+            )}
           </div>
         </div>
       </div>
