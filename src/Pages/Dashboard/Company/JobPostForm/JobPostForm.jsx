@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../../Provider/AuthProvider";
 
 function JobPostForm() {
-  const user = useContext(AuthContext)
+  const user = useContext(AuthContext);
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -68,7 +68,6 @@ function JobPostForm() {
       preferredQualifications: selectedPreferredQualifications,
     };
     // Set here fetch data route
-    // update some changes
 
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
       method: "POST",
@@ -403,7 +402,8 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
-              defaultValue={user?.user?.email} disabled={true}
+              defaultValue={user?.user?.email}
+              disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>
