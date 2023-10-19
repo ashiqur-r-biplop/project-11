@@ -3,23 +3,23 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
+const axiosSecure = axios.create({
+  baseURL: "https://job-portal-server-ebon.vercel.app",
+  // baseURL: "http://localhost:5000",
+});
 const useAxiosSecure = () => {
   const { logOut } = useContext(AuthContext);
   const navigate = useNavigate();
-  const axiosSecure = axios.create({
-    baseURL: "https://job-portal-server-ebon.vercel.app",
-  });
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
-      // if(typeof window !== 'undefined' && window.localStorage) {
-
-      const token = localStorage.getItem("access-token");
+      // console.log(config);
+      const token = localStorage.getItem("USER_ACCESS_TOKEN");
       if (token) {
-        config.headers.authorization = `Bearer ${token}`;
+        config.headers.Authorization = `Bearer ${token}`;
       }
       return config;
-      // }
     });
+
     axiosSecure.interceptors.response.use(
       (response) => response,
       async (error) => {
@@ -27,13 +27,14 @@ const useAxiosSecure = () => {
           error.response &&
           (error.response.status === 401 || error.response.status === 403)
         ) {
-          localStorage.removeItem("access-token");
-          navigate.push("/signin");
+          localStorage.removeItem("USER_ACCESS_TOKEN");
+          await logOut();
+          navigate("/login");
         }
         return Promise.reject(error);
       }
     );
-  }, [logOut, navigate, axiosSecure]);
+  }, [logOut, navigate]);
 
   return { axiosSecure };
 };

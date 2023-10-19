@@ -1,12 +1,18 @@
 /* eslint-disable no-unused-vars */
+<<<<<<< HEAD
 import axios from "axios";
 import { useState } from "react";
+=======
+import { useContext, useState } from "react";
+>>>>>>> b70d8125b9b1606d45acb5da556b1deec1dfb7df
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 function JobPostForm() {
+  const user = useContext(AuthContext)
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -20,17 +26,59 @@ function JobPostForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    const qualifications = {
+    const {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
+    } = data || {};
+    const mergedData = {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
       requiredQualifications: selectedRequiredQualifications,
       preferredQualifications: selectedPreferredQualifications,
     };
-
-    // This mergedData is full form data
-    const mergedData = { ...data, qualifications };
-
     // Set here fetch data route
 
+<<<<<<< HEAD
     fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
+=======
+    fetch("https://job-portal-server-ebon.vercel.app/job-post", {
+>>>>>>> b70d8125b9b1606d45acb5da556b1deec1dfb7df
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,7 +88,7 @@ function JobPostForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.status === "success") {
+        if (data.insertedId) {
           Swal.fire({
             icon: "success",
             title: "Job Post Successfully",
@@ -56,15 +104,21 @@ function JobPostForm() {
           });
         }
       })
-      .finally(() => {});
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleSelectedRequiredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedRequiredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedRequiredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedRequiredQualifications((prevQualifications) => [
+        ...prevQualifications,
+        value,
+      ]);
+    }
   };
 
   const handleRemoveRequiredQualification = (itemToRemove) => {
@@ -75,10 +129,11 @@ function JobPostForm() {
 
   const handleSelectedPreferredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedPreferredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedPreferredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedPreferredQualifications((previous) => [...previous, value]);
+    }
   };
 
   const handleRemovePreferredQualification = (itemToRemove) => {
@@ -212,7 +267,7 @@ function JobPostForm() {
           {/* Company Logo (Image Upload) */}
           <div className="col-span-12 lg:col-span-6">
             <label className="block text-[#05264e] font-semibold">
-              Company Logo
+              Company Logo #
             </label>
             <input
               type="file"
@@ -255,7 +310,7 @@ function JobPostForm() {
               <option value="">Select Job Type</option>
               <option value="Full-Time">Full-Time</option>
               <option value="Part-Time">Part-Time</option>
-              <option value="Contract">Contract</option>
+              <option value="hybrid">hybrid</option>
               {/* ... Add more options as needed */}
             </select>
             {errors.jobType && (
@@ -356,6 +411,7 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+              defaultValue={user?.user?.email} disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>

@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-
 import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useUserRole from "../../Hook/UseGetUserRole";
+
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  // console.log(user);
+  const { role } = useUserRole();
+  console.log(role);
   const navOptions = (
     <>
       <li className="text-lg">
@@ -39,8 +41,8 @@ const Navbar = () => {
   console.log(user?.photoURL);
   const handleLogout = () => {
     logOut()
-      .then((res) => { })
-      .then((data) => { });
+      .then((res) => {})
+      .then((data) => {});
   };
   return (
     <div className="bg-gray-300 sticky top-0 z-[999]">
@@ -95,21 +97,29 @@ const Navbar = () => {
                 tabIndex={0}
                 className="dropdown-content z-[99999999] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
-                  <Link to="/profile">Profile</Link>
-                </li>
-                <li>
-                  <Link to="/admin-profile">Admin Profile</Link>
-                </li>
-                <li>
-                  <Link to="/company-profile">company Profile</Link>
-                </li>
-                <li>
-                  <Link to="/applied-jobs">Apply Jobs</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard">Dashboard</Link>
-                </li>
+                {user && role == "jobSeeker" ? (
+                  <>
+                    <li>
+                      <Link to="/profile">Profile</Link>
+                    </li>
+                    <li>
+                      <Link to="/applied-jobs">Apply Jobs</Link>
+                    </li>
+                  </>
+                ) : role == "admin" ? (
+                  <li>
+                    <Link to="/admin-profile">Admin Profile</Link>
+                  </li>
+                ) : (
+                  <li>
+                    <Link to="/company-profile">company Profile</Link>
+                  </li>
+                )}
+                {role == "hiringManager" || role == "admin" && (
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                )}
                 <li onClick={handleLogout}>
                   <Link>Logout</Link>
                 </li>

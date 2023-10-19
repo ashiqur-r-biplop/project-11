@@ -8,8 +8,14 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import axios from "axios";
 
 const Register = () => {
-  const { signUp, updateUserProfile, googleSignIn, setReload } =
-    useContext(AuthContext);
+  const {
+    signUp,
+    updateUserProfile,
+    googleSignIn,
+    setReload,
+    reloadRole,
+    setReloadRole,
+  } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
@@ -50,8 +56,16 @@ const Register = () => {
             axios
               .post("https://job-portal-server-ebon.vercel.app/user", newUser)
               .then((res) => {
-                if (res?.data?.insertedId == true) {
-                  console.log("object");
+                if (res?.data?.insertedId) {
+                  setReload(false);
+                  setReloadRole(!reloadRole);
+                  form.reset();
+                  Swal.fire({
+                    icon: "success",
+                    title: "Wow!",
+                    text: "Register Successfully",
+                  });
+                  navigate(from, { replace: true });
                 }
               })
               .catch((err) => {
@@ -61,14 +75,6 @@ const Register = () => {
           .catch((err) => {
             console.log(err);
           });
-        form.reset();
-        Swal.fire({
-          icon: "success",
-          title: "Wow!",
-          text: "Register Successfully",
-        });
-        setReload(true);
-        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -86,7 +92,7 @@ const Register = () => {
           title: "Wow!",
           text: "Register Successfully",
         });
-        setReload(true);
+        setReload(false);
         navigate(from, { replace: true });
       })
       .catch((error) => setError(error.message));

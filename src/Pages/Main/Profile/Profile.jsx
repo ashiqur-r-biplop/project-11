@@ -1,10 +1,24 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserProfile from "../../../Component/Main/Profile/UserProfile";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../Hook/useAxiosSecure";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
+  const { axiosSecure } = useAxiosSecure();
+  const [userData, setUserData] = useState(null);
+  useEffect(() => {
+    axiosSecure
+      .get(`/user/${user?.email}`)
+      .then((res) => {
+        setUserData(res.data);
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
+  }, [axiosSecure, user?.email]);
+  console.log(userData, "profile", 25);
   return (
     <div className="max-w-screen-xl mx-auto bg-blue-50 m-6 rounded">
       <div className="md:flex gap-6 p-6">
@@ -16,7 +30,7 @@ const Profile = () => {
               alt=""
             />
             <h1 className="text-2xl font-bold mt-2 text-blue-500">
-              {user.displayName}
+              {user?.displayName}
             </h1>
             <h1>UI/UX Designer</h1>
             <Link to={`/update-profile`}>
