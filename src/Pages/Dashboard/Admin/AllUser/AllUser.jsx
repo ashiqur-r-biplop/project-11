@@ -10,7 +10,7 @@ const AllUser = () => {
      axiosSecure
        .get("https://job-portal-server-ebon.vercel.app/users")
        .then((res) => {
-         console.log(res.data);
+         
          setAllUsers(res.data);
        })
        .catch((e) => {
