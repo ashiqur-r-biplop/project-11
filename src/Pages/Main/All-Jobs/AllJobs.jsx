@@ -22,7 +22,7 @@ const AllJobs = () => {
     const applyJob = { jobId, applicantEmail };
     console.log(applyJob);
 
-    fetch(`http://localhost:5000/applicants`, {
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
