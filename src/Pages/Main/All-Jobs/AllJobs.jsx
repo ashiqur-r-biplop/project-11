@@ -9,12 +9,13 @@ const AllJobs = () => {
     fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data));
-  }, [jobs]);
+  }, []);
+  console.log(jobs[24]?.preferredQualifications);
 
   // Handle Apply Job:
-  const handleApplyJob = job => {
-    console.log(job);
-  }
+//   const handleApplyJob = job => {
+//     console.log(job);
+//   }
   return (
     <section className="">
       <div className="hero bg-[#f2f6fd] my-2 md:h-[50vh]">
@@ -69,15 +70,18 @@ const AllJobs = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
+               console.log(d?.preferredQualifications,'okokoko');
                 return (
                     <div
                     key={d?._id}
                     className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
+                    
+                     
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
-                        <div>
-                          <img src={d?.companyLogo} alt="" />
+                        <div className=" rounded-xl">
+                          <img className="rounded-xl w-[50px] h-[50px]" src={d?.companyLogo} alt="photo" />
                         </div>
                         <div>
                           <h2 className="text-xl font-semibold">{d?.companyName}</h2>
@@ -98,16 +102,11 @@ const AllJobs = () => {
                       <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
                       
                     </div>
-                    <div className="flex items-center gap-5 my-5">
-                      {d?.qualifications.requiredQualifications.map((r, i) => {
-                        return (
-                          <div key={i}>
-                            <button className="bg-gray-400 px-2 rounded-lg w-f">
-                              {r}
-                            </button>
-                          </div>
-                        );
-                      })}
+                    <div className="flex   ">
+                      {d?.preferredQualifications }
+                      
+                   
+                      
                     </div>
                     <div className="flex justify-between items-center py-3">
                       <h1>
@@ -116,7 +115,7 @@ const AllJobs = () => {
                         </span>{" "}
                         
                       </h1>
-                      <button onClick={() => handleApplyJob(d)} className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
+                      <button   className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
                         Apply Now
                         
                       </button>
