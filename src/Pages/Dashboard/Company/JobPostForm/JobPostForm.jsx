@@ -19,14 +19,52 @@ function JobPostForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    const qualifications = {
+    const {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
+    } = data || {};
+    const mergedData = {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
       requiredQualifications: selectedRequiredQualifications,
       preferredQualifications: selectedPreferredQualifications,
     };
-
-    // This mergedData is full form data
-    const mergedData = { ...data, qualifications };
-
     // Set here fetch data route
 
     fetch("https://job-portal-server-ebon.vercel.app/user/jobPost", {
@@ -55,15 +93,21 @@ function JobPostForm() {
           });
         }
       })
-      .finally(() => {});
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleSelectedRequiredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedRequiredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedRequiredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedRequiredQualifications((prevQualifications) => [
+        ...prevQualifications,
+        value,
+      ]);
+    }
   };
 
   const handleRemoveRequiredQualification = (itemToRemove) => {
@@ -74,10 +118,11 @@ function JobPostForm() {
 
   const handleSelectedPreferredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedPreferredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedPreferredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedPreferredQualifications((previous) => [...previous, value]);
+    }
   };
 
   const handleRemovePreferredQualification = (itemToRemove) => {
@@ -254,7 +299,7 @@ function JobPostForm() {
               <option value="">Select Job Type</option>
               <option value="Full-Time">Full-Time</option>
               <option value="Part-Time">Part-Time</option>
-              <option value="Contract">Contract</option>
+              <option value="hybrid">hybrid</option>
               {/* ... Add more options as needed */}
             </select>
             {errors.jobType && (
