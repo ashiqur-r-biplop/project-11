@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div className="max-w-screen-xl mx-auto bg-blue-50 m-6 rounded">
       <div className="md:flex gap-6 p-6">
-      <div className="bg-white mb-5 rounded md:w-[30%] p-3">
+      <div className="bg-white mb-5 rounded drop-shadow-xl md:w-[30%] p-3">
         <section className="  flex flex-col justify-center items-center ">
         <img className="rounded-full mt-10" src={user?.photoURL} alt="" />
         <h1 className="text-2xl font-bold mt-2 text-blue-500">{user.displayName}</h1>
@@ -38,7 +38,7 @@ const Profile = () => {
       </div>
 
       {/* second section 1st*/}
-      <div className="md:w-[70%]">
+      <div className="md:w-[70%] drop-shadow-xl">
         <div className="bg-white h-fit rounded">
         <h1 className="text-xl font-bold p-4">Basic Information</h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2">

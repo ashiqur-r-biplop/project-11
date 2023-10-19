@@ -10,13 +10,13 @@ const AdminProfile = () => {
   const { user } = useContext(AuthContext);
   return (
     <>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl bg-blue-50 mx-auto">
       <div >
         <img className="w-full  md:h-[420px]"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjrSLwMgcvhp5srEug2kptIMPqk-SIyB_Lng&usqp=CAU" alt="" />
       </div>
         <div className="-mt-[120px] md:-mt-[200px]">
           <div className="md:flex md:gap-x-12 p-6">
-          <div className="md:w-[30%] rounded p-4 bg-zinc-100">
+          <div className="md:w-[30%] drop-shadow-xl rounded p-4 bg-zinc-50">
             <div className="flex flex-col items-center">
 
               <img className="h-52 rounded-full" src={user?.photoURL} alt="" />
@@ -32,7 +32,7 @@ const AdminProfile = () => {
 
           </div>
 
-          <div className="p-4 md:w-[70%] rounded bg-zinc-100 ">
+          <div className="p-4 md:w-[70%] drop-shadow-xl rounded bg-zinc-50 ">
             <h1 className="text-2xl font-semibold text-blue-500">{user?.displayName}</h1>
             <p className="text-sky-500 font-semibold">Admin</p>
             <br />
@@ -95,48 +95,3 @@ const AdminProfile = () => {
 export default AdminProfile;
 
 
-
-{/* <h1 className="p-10 bg-sky-600 text-4xl text-center font-semibold text-white">Admin Profile</h1>
-
-<div className="md:flex justify-between">
-
-  <div className="-mt-10 mx-10">
-    <img className="rounded-full" src={user?.photoURL} alt="" />
-    <h1 className="ms-20 -mt-4 text-2xl font-semibold text-purple-400">Admin</h1>
-  </div>
-  <div className="p-4 flex items-center">
-    <button className="btn btn-block hover:bg-blue-700 bg-blue-500 text-white items-center">Edit my Profile</button>
-  </div>
-
-</div>
-
-<hr />
-
-<div>
-
-  <div className="p-4">
-    <p className="font-semibold">Name:</p>
-    <h1 className="text-2xl font-semibold text-blue-500">{user?.displayName}</h1>
-    <br />
-    <p className="font-semibold">Phone Number:</p>
-    <h1 className="text-lg">01898765432</h1>
-    <br />
-    <p className="font-semibold">Contact Email:</p>
-    <h1 className="text-lg">{user?.email}</h1>
-    <br />
-    <p className="font-semibold">Else_</p>
-    <div>
-      <button className="btn btn-link">github</button>
-      <button className="btn btn-link">Linkedin</button>
-      <button className="btn btn-link">Twitter</button>
-    </div>
-    <br />
-    <div>
-      <p className="font-semibold">Adderss:</p>
-      <p>387 Holt Court, Thamascille, Alaske, P02867</p>
-    </div>
-    <br />
-    <p></p>
-  </div>
-
-</div> */}
