@@ -2,10 +2,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import axios from "axios";
 
 const Login = () => {
   const [error, setError] = useState('')
-    const {login, googleSignIn} = useContext(AuthContext);
+    const {login,
+      googleSignIn,
+      setReload,
+      reloadRole,
+      setReloadRole,
+      setUserLoading} = useContext(AuthContext);
     const navigate = useNavigate()
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -35,21 +41,37 @@ const Login = () => {
         })
 
     }
-    const handleGoogle = () =>{
-      setError('')
+    const handleGoogle = () => {
+      setError("");
       googleSignIn()
-      .then(result=>{
+        .then((result) => {
           const user = result.user;
-          console.log(user)
-          Swal.fire({
-              icon: 'success',
-              title: 'Wow!',
-              text: 'Register Successfully'
+          const newUser = { name: user.name, email: user.email, image: user.photoURL, uerRole: "jobSeeker" };
+          console.log(user, 91);
+          axios
+            .post("https://job-portal-server-ebon.vercel.app/user", newUser)
+            .then((res) => {
+              if (res?.data?.insertedId) {
+                setReload(false);
+                setUserLoading(true);
+                setReloadRole(!reloadRole);
+  
+  
+                Swal.fire({
+                  icon: "success",
+                  title: "Wow!",
+                  text: "Register Successfully",
+                });
+                navigate(from, { replace: true });
+              }
             })
-          navigate(from, {replace: true});
-      })
-      .catch(error=>setError(error.message))
-  }
+            .catch((err) => {
+              console.log("Error from Register", err);
+            });
+        })
+        .catch((error) => setError(error.message));
+    };
+  
   return (
     <>
     
