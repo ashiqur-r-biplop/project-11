@@ -13,7 +13,7 @@ const AllJobs = () => {
   }, []);
   console.log(jobs[24]?.preferredQualifications);
 
-  
+
 
   // Handle Apply Job:
   const handleApplyJob = (job) => {
@@ -22,7 +22,7 @@ const AllJobs = () => {
     const applyJob = { jobId, applicantEmail };
     console.log(applyJob);
 
-    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`,{
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -85,14 +85,14 @@ const AllJobs = () => {
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {/* Page content here */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
                 console.log(d?.preferredQualifications, "okokoko");
                 return (
                   <div
                     key={d?._id}
-                    className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
+                    className="border w-full bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
@@ -255,7 +255,7 @@ export default AllJobs;
 /*
 
 {/* <form className="menu p-4 w-80 min-h-full bg-base-200 form-control">
-              
+
               <h2 className="text-center text-xl font-bold">Job type</h2>
               <div className="from-check">
                 <input type="checkbox" name="name" id="" />
@@ -318,6 +318,6 @@ export default AllJobs;
                   Hybrid
                 </label>
               </div>
-</form> 
+</form>
 
 */
