@@ -68,6 +68,7 @@ function JobPostForm() {
       preferredQualifications: selectedPreferredQualifications,
     };
     // Set here fetch data route
+    // update some changes
 
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
       method: "POST",
