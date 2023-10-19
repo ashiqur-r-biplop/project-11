@@ -16,24 +16,24 @@ const AllJobs = () => {
   
 
   // Handle Apply Job:
-  const handleApplyJob = job => {
+  const handleApplyJob = (job) => {
     const jobId = job?._id;
     const applicantEmail = user?.user?.email;
     const applyJob = { jobId, applicantEmail };
     console.log(applyJob);
 
     fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(applyJob)
+      body: JSON.stringify(applyJob),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      })
-  }
+      });
+  };
   return (
     <section className="">
       <div className="hero bg-[#f2f6fd] my-2 md:h-[50vh]">
