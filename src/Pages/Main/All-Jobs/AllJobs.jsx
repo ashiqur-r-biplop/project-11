@@ -6,7 +6,7 @@ const AllJobs = () => {
   const user = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("../../../../public/Jobs.json")
+    fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, [jobs]);
@@ -66,38 +66,40 @@ const AllJobs = () => {
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {/* Page content here */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
                 return (
-                  <div
-                    key={d?.id}
-                    className="border bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded "
+                    <div
+                    key={d?._id}
+                    className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
                         <div>
-                          <img src={d?.company_photo} alt="" />
+                          <img src={d?.companyLogo} alt="" />
                         </div>
                         <div>
-                          <h2 className="text-xl font-semibold">
-                            {d?.job_portal}
-                          </h2>
-                          <p>location</p>
+                          <h2 className="text-xl font-semibold">{d?.companyName}</h2>
+                          <p>{d?.jobLocation}</p>
+                         
                         </div>
                       </div>
                       <span><FaHeart /></span>
                     </div>
                     <div>
-                      <h1 className="font-bold text-xl">{d?.Job_title}</h1>
+                      <h1 className="font-bold text-xl">{d?.jobTitle}</h1>
+                      <p>D.Line:{d?.applicationDeadline}</p>
                       <div className="flex items-center gap-10 text-gray-500 py-3">
-                        <p>{d?.job_type}</p>
-                        <p>{d?.time} minutes ago</p>
+                        <p>{d?.jobType}</p>
+                        <p>{d?.jobCategory}</p>
+                        <p>{d?.remoteOrOnsite}</p>
                       </div>
-                      <p className="py-3">{d?.description.slice(0, 100)}...</p>
+                      <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
+                      
                     </div>
                     <div className="flex items-center gap-5 my-5">
-                      {d.requerment.map((r, i) => {
+                      {d?.qualifications.requiredQualifications.map((r, i) => {
                         return (
                           <div key={i}>
                             <button className="bg-gray-400 px-2 rounded-lg w-f">
@@ -109,16 +111,17 @@ const AllJobs = () => {
                     </div>
                     <div className="flex justify-between items-center py-3">
                       <h1>
-                        <span className="text-[#3C65F6] text-3xl font-semibold">
-                          ${d?.selary}
+                        <span className="text-[#3C65F6] text-xl ">
+                          {d?.salaryRange}
                         </span>{" "}
-                        <span>/Hour</span>
+                        
                       </h1>
                       <button onClick={() => handleApplyJob(d)} className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
                         Apply Now
+                        
                       </button>
                     </div>
-                  </div>
+                  </div>  
                 );
               })}
             </div>
