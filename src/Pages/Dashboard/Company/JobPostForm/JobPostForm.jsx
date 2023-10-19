@@ -86,12 +86,7 @@ function JobPostForm() {
           console.log(imgUrl, "+logo+", companyLogo);
           // Set here fetch data route
 
-<<<<<<< HEAD
-    fetch("https://job-box-server-phi.vercel.app/api/jobPost", {
-=======
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
-<<<<<<< HEAD
->>>>>>> b70d8125b9b1606d45acb5da556b1deec1dfb7df
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -120,43 +115,10 @@ function JobPostForm() {
       .catch((err) => {
         console.log(err);
       });
-=======
-     method: "POST",
-     headers: {
-       "content-type": "application/json",
-     },
-     body: JSON.stringify(mergedData),
-   })
-     .then((res) => res.json())
-     .then((data) => {
-       console.log(data);
-       if (data.insertedId) {
-         Swal.fire({
-           icon: "success",
-           title: "Job Post Successfully",
-           showConfirmButton: false,
-           timer: 1500,
-         });
-         // reset();
-       } else {
-         Swal.fire({
-           icon: "error",
-           title: "Oops...",
-           text: "Failed to post job!",
-         });
-       }
-     })
-     .catch((err) => {
-       console.log(err);
-     });
+
      }
 })
 
-
-
-
-
->>>>>>> 04452a1beab3ab620aaa4252c57b704cf6c2093a
   };
 
   const handleSelectedRequiredQualifications = (e) => {
