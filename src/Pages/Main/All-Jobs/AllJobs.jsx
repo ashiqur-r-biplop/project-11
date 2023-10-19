@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { AuthContext } from "../../../Provider/AuthProvider";
@@ -9,7 +10,8 @@ const AllJobs = () => {
     fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data));
-  }, [jobs]);
+  }, []);
+  console.log(jobs[24]?.preferredQualifications);
 
   // Handle Apply Job:
   const handleApplyJob = (job) => {
@@ -69,6 +71,7 @@ const AllJobs = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
+                console.log(d?.preferredQualifications, "okokoko");
                 return (
                   <div
                     key={d?._id}
@@ -76,8 +79,12 @@ const AllJobs = () => {
                   >
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
-                        <div>
-                          <img src={d?.companyLogo} alt="" />
+                        <div className=" rounded-xl">
+                          <img
+                            className="rounded-xl w-[50px] h-[50px]"
+                            src={d?.companyLogo}
+                            alt="photo"
+                          />
                         </div>
                         <div>
                           <h2 className="text-xl font-semibold">
