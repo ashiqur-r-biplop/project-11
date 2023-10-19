@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 function JobPostForm() {
+  const user = useContext(AuthContext)
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -19,14 +21,52 @@ function JobPostForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    const qualifications = {
+    const {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
+    } = data || {};
+    const mergedData = {
+      jobTitle,
+      companyName,
+      companyLogo,
+      jobLocation,
+      jobType,
+      jobCategory,
+      remoteOrOnsite,
+      salaryRange,
+      applicationDeadline,
+      contactEmail,
+      contactPhone,
+      companyWebsite,
+      applicationLink,
+      trackingId,
+      educationLevel,
+      experienceLevel,
+      jobDescription,
+      howToApply,
+      applicationInstructions,
+      equalOpportunityStatement,
       requiredQualifications: selectedRequiredQualifications,
       preferredQualifications: selectedPreferredQualifications,
     };
-
-    // This mergedData is full form data
-    const mergedData = { ...data, qualifications };
-
     // Set here fetch data route
 
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
@@ -55,15 +95,21 @@ function JobPostForm() {
           });
         }
       })
-      .finally(() => { });
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleSelectedRequiredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedRequiredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedRequiredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedRequiredQualifications((prevQualifications) => [
+        ...prevQualifications,
+        value,
+      ]);
+    }
   };
 
   const handleRemoveRequiredQualification = (itemToRemove) => {
@@ -74,10 +120,11 @@ function JobPostForm() {
 
   const handleSelectedPreferredQualifications = (e) => {
     const value = e.target.value;
-    setSelectedPreferredQualifications((prevQualifications) => [
-      ...prevQualifications,
-      value,
-    ]);
+    if (selectedPreferredQualifications.includes(value)) {
+      return;
+    } else {
+      setSelectedPreferredQualifications((previous) => [...previous, value]);
+    }
   };
 
   const handleRemovePreferredQualification = (itemToRemove) => {
@@ -254,7 +301,7 @@ function JobPostForm() {
               <option value="">Select Job Type</option>
               <option value="Full-Time">Full-Time</option>
               <option value="Part-Time">Part-Time</option>
-              <option value="Contract">Contract</option>
+              <option value="hybrid">hybrid</option>
               {/* ... Add more options as needed */}
             </select>
             {errors.jobType && (
@@ -355,6 +402,7 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+              defaultValue={user?.user?.email} disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>
