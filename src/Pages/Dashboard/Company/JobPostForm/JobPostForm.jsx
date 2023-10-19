@@ -1,10 +1,6 @@
 /* eslint-disable no-unused-vars */
-<<<<<<< HEAD
 import axios from "axios";
 import { useState } from "react";
-=======
-import { useContext, useState } from "react";
->>>>>>> b70d8125b9b1606d45acb5da556b1deec1dfb7df
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
