@@ -9,12 +9,11 @@ const AllJobs = () => {
   useEffect(() => {
     fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
-      .then((data) => {
-        // const activeJobs = data.filter(d => d.status === 'active');
-        // setJobs(activeJobs)
-        setJobs(data);
-      });
-  }, [jobs]);
+      .then((data) => setJobs(data));
+  }, []);
+  console.log(jobs[24]?.preferredQualifications);
+
+  
 
   // Handle Apply Job:
   const handleApplyJob = (job) => {
