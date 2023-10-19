@@ -1,14 +1,15 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import useAxiosSecure from "../../../Hook/useAxiosSecure";
 // import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const UpdateProfile = () => {
   const { user } = useContext(AuthContext);
   const [skills, setSkills] = useState([]);
-  console.log(skills);
+  const { axiosSecure } = useAxiosSecure();
   const handleUpdateSkill = (e) => {
-    const value = e.target.value
+    const value = e.target.value;
     console.log(value);
     setSkills((previous) => [...previous, value]);
   };
@@ -16,15 +17,14 @@ const UpdateProfile = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const email = form.email.value;
     const field = form.field.value;
     const age = form.age.value;
+    const email = form.age.email;
     const experience = form.experience.value;
     const selery = form.selery.value;
     const location = form.location.value;
     const country = form.country.value;
     const phone = form.phone.value;
-    const skills = form.skills.value;
     const logo = form.logo.value;
     const education = form.education.value;
     const accomplishments = form.accomplishments.value;
@@ -40,7 +40,7 @@ const UpdateProfile = () => {
       location,
       country,
       phone,
-      skills,
+      skills: skills,
       logo,
       education,
       accomplishments,
@@ -49,7 +49,16 @@ const UpdateProfile = () => {
       selery,
     };
     console.log(updateProfile);
+    axiosSecure
+      .patch(`/user-update/${user?.email}`, updateProfile)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
   };
+
   return (
     <div className="max-w-screen-xl mx-auto bg-blue-50 m-6 rounded">
       <img
@@ -131,6 +140,8 @@ const UpdateProfile = () => {
                     type="email"
                     placeholder="Email"
                     name="email"
+                    defaultValue={user?.email}
+                    disabled={true}
                     className="input input-bordered border-sky-500 input-info w-full mb-2"
                   />
                 </div>
