@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 function JobPostForm() {
+  const user = useContext(AuthContext)
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -23,6 +25,7 @@ function JobPostForm() {
       requiredQualifications: selectedRequiredQualifications,
       preferredQualifications: selectedPreferredQualifications,
     };
+    console.log(data);
 
     // This mergedData is full form data
     const mergedData = { ...data, qualifications };
@@ -355,6 +358,7 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+              defaultValue={user?.user?.email} disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>
