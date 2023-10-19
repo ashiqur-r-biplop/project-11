@@ -1,13 +1,39 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const AllJobs = () => {
   const [jobs, setJobs] = useState([]);
+  const user = useContext(AuthContext);
+
   useEffect(() => {
-    fetch("../../../../public/Jobs.json")
+    fetch("https://job-portal-server-ebon.vercel.app/all-jobs")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
-  }, []);
-  console.log(jobs);
+      .then((data) => {
+        // const activeJobs = data.filter(d => d.status === 'active');
+        // setJobs(activeJobs)
+        setJobs(data);
+      });
+  }, [jobs]);
+
+  // Handle Apply Job:
+  const handleApplyJob = job => {
+    const jobId = job?._id;
+    const applicantEmail = user?.user?.email;
+    const applyJob = { jobId, applicantEmail };
+    console.log(applyJob);
+
+    fetch(`https://job-portal-server-ebon.vercel.app/applicants`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(applyJob)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+  }
   return (
     <section className="">
       <div className="hero bg-[#f2f6fd] my-2 md:h-[50vh]">
@@ -59,38 +85,40 @@ const AllJobs = () => {
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {/* Page content here */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* card */}
               {jobs?.map((d) => {
                 return (
                   <div
-                    key={d?.id}
-                    className="border bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded "
+                    key={d?._id}
+                    className="border w-96 bg-[#F8FAFF] hover:bg-transparent transition-all py-10 px-4 rounded"
                   >
                     <div className="flex items-start justify-between pb-5">
                       <div className="flex items-center gap-5">
                         <div>
-                          <img src={d?.company_photo} alt="" />
+                          <img src={d?.companyLogo} alt="" />
                         </div>
                         <div>
-                          <h2 className="text-xl font-semibold">
-                            {d?.job_portal}
-                          </h2>
-                          <p>location</p>
+                          <h2 className="text-xl font-semibold">{d?.companyName}</h2>
+                          <p>{d?.jobLocation}</p>
+
                         </div>
                       </div>
-                      <span><FaHeart/></span>
+                      <span><FaHeart /></span>
                     </div>
                     <div>
-                      <h1 className="font-bold text-xl">{d?.Job_title}</h1>
+                      <h1 className="font-bold text-xl">{d?.jobTitle}</h1>
+                      <p>D.Line:{d?.applicationDeadline}</p>
                       <div className="flex items-center gap-10 text-gray-500 py-3">
-                        <p>{d?.job_type}</p>
-                        <p>{d?.time} minutes ago</p>
+                        <p>{d?.jobType}</p>
+                        <p>{d?.jobCategory}</p>
+                        <p>{d?.remoteOrOnsite}</p>
                       </div>
-                      <p className="py-3">{d?.description.slice(0, 100)}...</p>
+                      <p className="py-3">{d?.jobDescription.slice(0, 40)}...</p>
+
                     </div>
                     <div className="flex items-center gap-5 my-5">
-                      {d.requerment.map((r, i) => {
+                      {d?.qualifications?.requiredQualifications.map((r, i) => {
                         return (
                           <div key={i}>
                             <button className="bg-gray-400 px-2 rounded-lg w-f">
@@ -102,13 +130,14 @@ const AllJobs = () => {
                     </div>
                     <div className="flex justify-between items-center py-3">
                       <h1>
-                        <span className="text-[#3C65F6] text-3xl font-semibold">
-                          ${d?.selary}
+                        <span className="text-[#3C65F6] text-xl ">
+                          {d?.salaryRange}
                         </span>{" "}
-                        <span>/Hour</span>
+
                       </h1>
-                      <button className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
+                      <button onClick={() => handleApplyJob(d)} className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
                         Apply Now
+
                       </button>
                     </div>
                   </div>
@@ -130,75 +159,75 @@ const AllJobs = () => {
               className="drawer-overlay"
             ></label>
 
-<div
-           className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
-            {/* Sidebar content here */}
-          
-            <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
-              <div className="ms-20 mt-2">
-               <label htmlFor="full">
+            <div
+              className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
+              {/* Sidebar content here */}
 
-                <input type="checkbox" name="full" value="full" id="full"/> <span className="ms-4">Full</span>
-               </label>
-                 
+              <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
+              <div className="ms-20 mt-2">
+                <label htmlFor="full">
+
+                  <input type="checkbox" name="full" value="full" id="full" /> <span className="ms-4">Full</span>
+                </label>
+
                 <br />
                 <label htmlFor="part">
 
-                <input type="checkbox" name="part" value="part" id="part"   /> <span className="ms-4">Part</span>
+                  <input type="checkbox" name="part" value="part" id="part" /> <span className="ms-4">Part</span>
                 </label>
-                 
+
                 <br />
                 <label htmlFor="remote">
 
-                <input type="checkbox" name="remote" value="remote" id="remote"   /> <span className="ms-4">Remote</span>
+                  <input type="checkbox" name="remote" value="remote" id="remote" /> <span className="ms-4">Remote</span>
                 </label>
-                 
+
               </div>
-             
-            
-            <h3 className="text-center text-xl my-2 font-bold">Position </h3>
+
+
+              <h3 className="text-center text-xl my-2 font-bold">Position </h3>
               <div className="ms-20 mt-2">
-               <label htmlFor="senior">
+                <label htmlFor="senior">
 
-                <input type="checkbox" name="name" value="senior" id="senior"  /> <span className="ms-4">Senior</span>
-               </label>
-                
-                  
+                  <input type="checkbox" name="name" value="senior" id="senior" /> <span className="ms-4">Senior</span>
+                </label>
+
+
                 <br />
                 <label>
 
-                <input type="checkbox" name="name" value='junior'   /> <span className="ms-4">Junior</span>
+                  <input type="checkbox" name="name" value='junior' /> <span className="ms-4">Junior</span>
                 </label>
-                 
-              
+
+
                 <br />
                 <label>
 
-                <input type="checkbox" name="name" value='fresher'   /> <span className="ms-4">Fresher</span>
+                  <input type="checkbox" name="name" value='fresher' /> <span className="ms-4">Fresher</span>
                 </label>
-                 
+
               </div>
-            
-            <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
-                
-            <div className="ms-20 mt-2"  >
+
+              <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
+
+              <div className="ms-20 mt-2"  >
                 <label>
 
-                <input type="checkbox" value='on-site'   /> <span className="ms-4">On-Site</span>   <br />
+                  <input type="checkbox" value='on-site' /> <span className="ms-4">On-Site</span>   <br />
                 </label>
                 <label>
 
-                <input type="checkbox" value='remote'   /> <span className="ms-4">Remote</span>   <br />
+                  <input type="checkbox" value='remote' /> <span className="ms-4">Remote</span>   <br />
                 </label>
                 <label>
-                <input type="checkbox" value='hybrid'  /> <span className="ms-4"> Hybrid</span>  
+                  <input type="checkbox" value='hybrid' /> <span className="ms-4"> Hybrid</span>
                 </label>
-                
-                
-           </div>
-          </div>
 
-            
+
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import axios from "axios";
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null);
@@ -17,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [reload, setReload] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [reloadRole, setReloadRole] = useState(true);
   const googleProvider = new GoogleAuthProvider();
 
   const signUp = (email, password) => {
@@ -26,6 +28,7 @@ const AuthProvider = ({ children }) => {
 
   const updateUserProfile = (name, photo) => {
     setLoading(true);
+    setReload(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -46,42 +49,34 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (current) => {
-      setUser(current);
-      setLoading(false);
-      setReload(false);
-
-      // get current user email when an user login
-      if (current && current.email) {
-        const loggedUser = {
-          email: current.email,
-        };
-
-        // fetch jwt route from backend
-        // and post USER_ACCESS_TOKEN to backend
-        // and set USER_ACCESS_TOKEN to localStorage when an user login to website
-        // and remove USER_ACCESS_TOKEN from localStorage when user logout from website
-
-        fetch("http://localhost:7070/api/createJWT", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(loggedUser),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            localStorage.setItem("USER_ACCESS_TOKEN", data.token);
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      // get and set token
+      if (currentUser) {
+        axios
+          .post("https://job-portal-server-ebon.vercel.app/jwt", {
+            email: currentUser.email,
           })
-          .catch((error) => console.log(error));
+          .then((data) => {
+            setUser(currentUser);
+            localStorage.setItem("USER_ACCESS_TOKEN", data.data.token);
+            setLoading(false);
+            setReload(false);
+          })
+          .catch((err) => {
+            console.log(err);
+            setUser(currentUser);
+            setLoading(false);
+          });
       } else {
+        console.log("logout successfully");
         localStorage.removeItem("USER_ACCESS_TOKEN");
+        setUser(currentUser);
+        setLoading(false);
       }
     });
     return () => {
-      return unsubscribe;
+      unSubscribe();
     };
   }, [reload]);
 
@@ -94,9 +89,13 @@ const AuthProvider = ({ children }) => {
     logOut,
     setReload,
     googleSignIn,
+    reloadRole,
+    setReloadRole,
   };
 
-  return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;

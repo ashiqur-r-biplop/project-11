@@ -1,13 +1,21 @@
+/* eslint-disable no-unused-vars */
 // import React from 'react';
 
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import axios from "axios";
 
 const Register = () => {
-  const { signUp, updateUserProfile, googleSignIn, setReload } =
-    useContext(AuthContext);
+  const {
+    signUp,
+    updateUserProfile,
+    googleSignIn,
+    setReload,
+    reloadRole,
+    setReloadRole,
+  } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
@@ -42,15 +50,31 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUserProfile(name, photo);
-        form.reset();
-        Swal.fire({
-          icon: "success",
-          title: "Wow!",
-          text: "Register Successfully",
-        });
-        setReload(true);
-        navigate(from, { replace: true });
+        const newUser = { name, email, image: photo, uerRole: "jobSeeker" };
+        updateUserProfile(name, photo)
+          .then((res) => {
+            axios
+              .post("https://job-portal-server-ebon.vercel.app/user", newUser)
+              .then((res) => {
+                if (res?.data?.insertedId) {
+                  setReload(false);
+                  setReloadRole(!reloadRole);
+                  form.reset();
+                  Swal.fire({
+                    icon: "success",
+                    title: "Wow!",
+                    text: "Register Successfully",
+                  });
+                  navigate(from, { replace: true });
+                }
+              })
+              .catch((err) => {
+                console.log("Error from Register", err);
+              });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((error) => {
         console.log(error);
@@ -68,7 +92,7 @@ const Register = () => {
           title: "Wow!",
           text: "Register Successfully",
         });
-        setReload(true)
+        setReload(false);
         navigate(from, { replace: true });
       })
       .catch((error) => setError(error.message));
