@@ -81,7 +81,6 @@ const About = () => {
         </div>
       </section>
       <Team></Team>
-      <Testimonial></Testimonial>
     </div>
   );
 };

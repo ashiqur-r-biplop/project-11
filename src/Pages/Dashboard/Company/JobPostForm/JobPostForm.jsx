@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 function JobPostForm() {
+  const user = useContext(AuthContext)
   const [selectedRequiredQualifications, setSelectedRequiredQualifications] =
     useState([]);
   const [selectedPreferredQualifications, setSelectedPreferredQualifications] =
@@ -67,7 +69,7 @@ function JobPostForm() {
     };
     // Set here fetch data route
 
-    fetch("https://job-portal-server-ebon.vercel.app/user/jobPost", {
+    fetch("https://job-portal-server-ebon.vercel.app/job-post", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -77,7 +79,7 @@ function JobPostForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.status === "success") {
+        if (data.insertedId) {
           Swal.fire({
             icon: "success",
             title: "Job Post Successfully",
@@ -400,6 +402,7 @@ function JobPostForm() {
               placeholder="Enter contact email"
               {...register("contactEmail", { required: true })}
               className="w-full border p-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+              defaultValue={user?.user?.email} disabled={true}
             />
             {errors.contactEmail && (
               <p className="text-red-500">Contact Email is required</p>

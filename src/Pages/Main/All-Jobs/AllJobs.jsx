@@ -1,13 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const AllJobs = () => {
   const [jobs, setJobs] = useState([]);
+  const user = useContext(AuthContext);
+
   useEffect(() => {
     fetch("../../../../public/Jobs.json")
       .then((res) => res.json())
       .then((data) => setJobs(data));
-  }, []);
-  console.log(jobs);
+  }, [jobs]);
+
+  // Handle Apply Job:
+  const handleApplyJob = job => {
+    console.log(job);
+  }
   return (
     <section className="">
       <div className="hero bg-[#f2f6fd] my-2 md:h-[50vh]">
@@ -79,7 +86,7 @@ const AllJobs = () => {
                           <p>location</p>
                         </div>
                       </div>
-                      <span><FaHeart/></span>
+                      <span><FaHeart /></span>
                     </div>
                     <div>
                       <h1 className="font-bold text-xl">{d?.Job_title}</h1>
@@ -107,7 +114,7 @@ const AllJobs = () => {
                         </span>{" "}
                         <span>/Hour</span>
                       </h1>
-                      <button className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
+                      <button onClick={() => handleApplyJob(d)} className="bg-[#E0E6F7] px-4 py-3 rounded-lg text-[#2b67ff]">
                         Apply Now
                       </button>
                     </div>
@@ -130,75 +137,75 @@ const AllJobs = () => {
               className="drawer-overlay"
             ></label>
 
-<div
-           className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
-            {/* Sidebar content here */}
-          
-            <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
-              <div className="ms-20 mt-2">
-               <label htmlFor="full">
+            <div
+              className="menu p-4 w-80 min-h-full bg-base-200 inputs" >
+              {/* Sidebar content here */}
 
-                <input type="checkbox" name="full" value="full" id="full"/> <span className="ms-4">Full</span>
-               </label>
-                 
+              <h2 className="text-center text-xl my-2 font-bold">Job type</h2>
+              <div className="ms-20 mt-2">
+                <label htmlFor="full">
+
+                  <input type="checkbox" name="full" value="full" id="full" /> <span className="ms-4">Full</span>
+                </label>
+
                 <br />
                 <label htmlFor="part">
 
-                <input type="checkbox" name="part" value="part" id="part"   /> <span className="ms-4">Part</span>
+                  <input type="checkbox" name="part" value="part" id="part" /> <span className="ms-4">Part</span>
                 </label>
-                 
+
                 <br />
                 <label htmlFor="remote">
 
-                <input type="checkbox" name="remote" value="remote" id="remote"   /> <span className="ms-4">Remote</span>
+                  <input type="checkbox" name="remote" value="remote" id="remote" /> <span className="ms-4">Remote</span>
                 </label>
-                 
+
               </div>
-             
-            
-            <h3 className="text-center text-xl my-2 font-bold">Position </h3>
+
+
+              <h3 className="text-center text-xl my-2 font-bold">Position </h3>
               <div className="ms-20 mt-2">
-               <label htmlFor="senior">
+                <label htmlFor="senior">
 
-                <input type="checkbox" name="name" value="senior" id="senior"  /> <span className="ms-4">Senior</span>
-               </label>
-                
-                  
+                  <input type="checkbox" name="name" value="senior" id="senior" /> <span className="ms-4">Senior</span>
+                </label>
+
+
                 <br />
                 <label>
 
-                <input type="checkbox" name="name" value='junior'   /> <span className="ms-4">Junior</span>
+                  <input type="checkbox" name="name" value='junior' /> <span className="ms-4">Junior</span>
                 </label>
-                 
-              
+
+
                 <br />
                 <label>
 
-                <input type="checkbox" name="name" value='fresher'   /> <span className="ms-4">Fresher</span>
+                  <input type="checkbox" name="name" value='fresher' /> <span className="ms-4">Fresher</span>
                 </label>
-                 
+
               </div>
-            
-            <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
-                
-            <div className="ms-20 mt-2"  >
+
+              <h3 className="text-center text-xl my-2 font-bold">On-Site / Remote </h3>
+
+              <div className="ms-20 mt-2"  >
                 <label>
 
-                <input type="checkbox" value='on-site'   /> <span className="ms-4">On-Site</span>   <br />
+                  <input type="checkbox" value='on-site' /> <span className="ms-4">On-Site</span>   <br />
                 </label>
                 <label>
 
-                <input type="checkbox" value='remote'   /> <span className="ms-4">Remote</span>   <br />
+                  <input type="checkbox" value='remote' /> <span className="ms-4">Remote</span>   <br />
                 </label>
                 <label>
-                <input type="checkbox" value='hybrid'  /> <span className="ms-4"> Hybrid</span>  
+                  <input type="checkbox" value='hybrid' /> <span className="ms-4"> Hybrid</span>
                 </label>
-                
-                
-           </div>
-          </div>
 
-            
+
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
