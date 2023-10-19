@@ -6,7 +6,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import useUserRole from "../../Hook/UseGetUserRole";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, userLoading } = useContext(AuthContext);
   const { role } = useUserRole();
   const navOptions = (
     <>

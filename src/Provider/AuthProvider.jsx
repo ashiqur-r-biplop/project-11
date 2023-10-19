@@ -19,15 +19,18 @@ const AuthProvider = ({ children }) => {
   const [reload, setReload] = useState(true);
   const [loading, setLoading] = useState(true);
   const [reloadRole, setReloadRole] = useState(true);
+  const [userLoading, setUserLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
 
   const signUp = (email, password) => {
     setLoading(true);
+    setUserLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const updateUserProfile = (name, photo) => {
     setLoading(true);
+    setUserLoading(true);
     setReload(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -47,6 +50,7 @@ const AuthProvider = ({ children }) => {
 
   const googleSignIn = () => {
     setLoading(true);
+    setUserLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   useEffect(() => {
@@ -62,8 +66,10 @@ const AuthProvider = ({ children }) => {
             localStorage.setItem("USER_ACCESS_TOKEN", data.data.token);
             setLoading(false);
             setReload(false);
+            setUserLoading(false);
           })
           .catch((err) => {
+            setUserLoading(false);
             console.log(err);
             setUser(currentUser);
             setLoading(false);
@@ -73,12 +79,13 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem("USER_ACCESS_TOKEN");
         setUser(currentUser);
         setLoading(false);
+        setUserLoading(false);
       }
     });
     return () => {
       unSubscribe();
     };
-  }, [reload]);
+  }, [reload, userLoading]);
 
   const authInfo = {
     user,
@@ -91,6 +98,8 @@ const AuthProvider = ({ children }) => {
     googleSignIn,
     reloadRole,
     setReloadRole,
+    userLoading, 
+    setUserLoading
   };
 
   return (
