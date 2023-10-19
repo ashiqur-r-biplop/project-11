@@ -15,11 +15,13 @@ import Dashboard from "../Layout/Dashboard/Dashboard";
 import UpdateProfile from "../Pages/Main/UpdateProfile/UpdateProfile";
 import DashboardHome from "../Component/DashBoard/DashboardHome/DashboardHome";
 import JobPostForm from "../Pages/Dashboard/Company/JobPostForm/JobPostForm";
-import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
-import AdminRoute from "../Hook/AdminRole";
-import HiringManagerRole from "../Hook/HiringManagerRole";
-import MyJobs from "../Pages/Dashboard/Company/MyJob/MyJobs";
 import PrivateRoute from "./PrivateRoute";
+import HiringManagerRole from "../Hook/HiringManagerRole";
+import AdminRoute from "../Hook/AdminRole";
+import AllPostedJobs from "../Component/Main/Home/AllPostedJobs";
+import AppliedPersons from "../Component/Main/Home/AppliedPersons";
+import MyJobs from "../Pages/Dashboard/Company/MyJob/MyJobs";
+import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
 import AllJobsAdmin from "../Pages/Dashboard/Admin/AllJobs/AllJobsAdmin";
 
 export const router = createBrowserRouter([
@@ -102,6 +104,14 @@ export const router = createBrowserRouter([
             <AppliedJobs></AppliedJobs>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/allposted-jobs",
+        element: <AllPostedJobs></AllPostedJobs>,
+      },
+      {
+        path: "/applied-persons",
+        element: <AppliedPersons></AppliedPersons>,
       },
     ],
   },

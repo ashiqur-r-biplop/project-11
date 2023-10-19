@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import axios from "axios";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillHome, AiOutlineClose, AiOutlineRight } from "react-icons/ai";
@@ -21,7 +22,7 @@ function JobPostForm() {
     reset,
     formState: { errors },
   } = useForm();
-  
+
   const img_hosting_Url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
   const onSubmit = (data) => {
      const formData = new FormData()
@@ -86,41 +87,38 @@ function JobPostForm() {
           // Set here fetch data route
 
     fetch("https://job-portal-server-ebon.vercel.app/job-post", {
-     method: "POST",
-     headers: {
-       "content-type": "application/json",
-     },
-     body: JSON.stringify(mergedData),
-   })
-     .then((res) => res.json())
-     .then((data) => {
-       console.log(data);
-       if (data.insertedId) {
-         Swal.fire({
-           icon: "success",
-           title: "Job Post Successfully",
-           showConfirmButton: false,
-           timer: 1500,
-         });
-         // reset();
-       } else {
-         Swal.fire({
-           icon: "error",
-           title: "Oops...",
-           text: "Failed to post job!",
-         });
-       }
-     })
-     .catch((err) => {
-       console.log(err);
-     });
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mergedData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Job Post Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          // reset();
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Failed to post job!",
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
      }
 })
 
-
-
-
-    
   };
 
   const handleSelectedRequiredQualifications = (e) => {
