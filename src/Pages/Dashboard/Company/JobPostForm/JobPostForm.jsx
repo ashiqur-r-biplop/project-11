@@ -211,7 +211,7 @@ function JobPostForm() {
           {/* Company Logo (Image Upload) */}
           <div className="col-span-12 lg:col-span-6">
             <label className="block text-[#05264e] font-semibold">
-              Company Logo
+              Company Logo #
             </label>
             <input
               type="file"
