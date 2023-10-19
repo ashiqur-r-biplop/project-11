@@ -14,6 +14,8 @@ import AppliedJobs from "../Pages/Main/AppliedJobs/AppliedJobs";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import UpdateProfile from "../Pages/Main/UpdateProfile/UpdateProfile";
 import JobPostForm from "../Pages/Dashboard/Company/JobPostForm/JobPostForm";
+import AllPostedJobs from "../Component/Main/Home/AllPostedJobs";
+import AppliedPersons from "../Component/Main/Home/AppliedPersons";
 
 export const router = createBrowserRouter([
   {
@@ -72,6 +74,14 @@ export const router = createBrowserRouter([
       {
         path: "/applied-jobs",
         element: <AppliedJobs></AppliedJobs>,
+      },
+      {
+        path: "/allposted-jobs",
+        element: <AllPostedJobs></AllPostedJobs>,
+      },
+      {
+        path: "/applied-persons",
+        element: <AppliedPersons></AppliedPersons>,
       },
     ],
   },
