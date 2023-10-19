@@ -31,7 +31,7 @@ const AppliedPersons = () => {
                 >
                   <td>{index + 1}</td>
 
-                
+
                   <td>{applicant.name}</td>
                   <td>{applicant.email}</td>
                   <td>{applicant.id}</td>
