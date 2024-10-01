@@ -1,23 +1,21 @@
 import { useEffect, useState } from "react";
-import useAxiosSecure  from "../../../../Hook/useAxiosSecure";
+import useAxiosSecure from "../../../../Hook/useAxiosSecure";
 import { Link } from "react-router-dom";
 
 const AllUser = () => {
   const [allUsers, setAllUsers] = useState([]);
- const { axiosSecure } = useAxiosSecure();
+  const { axiosSecure } = useAxiosSecure();
 
-   useEffect(() => {
-     axiosSecure
-       .get("https://job-portal-server-ebon.vercel.app/users")
-       .then((res) => {
-         
-         setAllUsers(res.data);
-       })
-       .catch((e) => {
-         console.log(e.message);
-       });
-   }, []);
-
+  useEffect(() => {
+    axiosSecure
+      .get("https://job-portal-server-ebon.vercel.app/users")
+      .then((res) => {
+        setAllUsers(res.data);
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
+  }, [axiosSecure]);
 
   return (
     <div>
